@@ -1,0 +1,345 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family:'Open Sans', sans-serif;
+    background-color: #3f3f3f;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+h2{
+    font-family:'Courier New', Courier, monospace;
+}
+
+header {
+    width: 100%;
+    background-color: #e5e5e5;
+    border-bottom: 1px solid #ffffff;
+    position: fixed; /* Mantener fija en la parte superior */
+    top: 0; /* Ubicar en la parte superior de la ventana */
+    z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+}
+
+
+
+/* Estilo general de la barra de navegación */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+}
+
+/* Estilo de los enlaces de navegación */
+.navbar a {
+    font-size: 16px;
+    color: #000; /* Color del texto */
+    text-decoration: none;
+    margin: 0 15px; /* Espaciado horizontal entre enlaces */
+    transition: transform 0.3s ease, color 0.3s ease; /* Transición suave para el agrandamiento */
+}
+
+/* Efecto hover para los enlaces de navegación */
+.navbar a:hover {
+    transform: scale(1.2); /* Aumentar tamaño a 120% */
+    color: #4b0082; /* Cambiar el color del texto al pasar el cursor */
+}
+
+/* Estilo del logo */
+.logo img {
+    height: 40px;
+}
+
+/* Estilo del contenedor de búsqueda */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    border: 1px solid #000000;
+    border-radius: 40px;
+    padding: 8px 15px;
+    width: 400px;
+    height: 25px;
+}
+
+.search-button {
+    border: none;
+    background: none;
+    margin-left: -40px;
+    cursor: pointer;
+}
+
+/* Estilo de la lista de enlaces */
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+/* Ajuste de estilo de cada enlace */
+.nav-links li a {
+    text-decoration: none;
+    color: #000000;
+    padding: 5px 10px;
+}
+
+/* Efecto hover para los enlaces de lista */
+.nav-links li a:hover {
+    border-bottom: 2px solid #333;
+}
+
+/* Estilo del contenedor de cuenta */
+.account-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.toggle-button{
+    border: none;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+/* Estilo para el contenedor que agrupa el login y el botón de cuenta */
+.account-combined {
+    display: flex; /* Flexbox para alinear los elementos */
+    align-items: center; /* Alinear verticalmente en el centro */
+    gap: 10px; /* Espacio entre el icono de login y el botón */
+    border-radius: 20px;
+}
+
+/* Botón de cuenta */
+.account-button {
+    margin-right: 10px;
+    padding: 5px 15px; /* Ajuste de padding */
+    display: flex; /* Flexbox para el contenido */
+    align-items: center; /* Alinear verticalmente en el centro */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #cecece; /* Color de fondo */
+    color: rgb(0, 0, 0); /* Color de texto */
+}
+.account-button:hover{
+    background-color:#ffffff;
+}
+/* Estilo del icono de login */
+.login img {
+    margin-left: 10px;
+    height: 30px;
+    float: right;
+    margin-right: 0%;
+}
+
+
+
+
+
+
+/* Aplicar box-sizing a todos los elementos */
+* {
+    box-sizing: border-box;
+}
+
+/* Contenedor principal para la página de login */
+.login-page {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    height: 100vh;
+    position: relative;
+}
+
+/* Contenedor que engloba la imagen de fondo y el contenido */
+.background-container {
+    position: relative;
+    margin: 5%; /* Márgenes del 5% en todos los lados */
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: center; /* Centrar contenido */
+    align-items: center; /* Centrar contenido verticalmente */
+    border-radius: 20px;
+}
+
+/* Imagen de fondo */
+.background-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px; /* Bordes redondeados */
+    z-index: 1; /* Mantener la imagen en el fondo */
+}
+
+/* Superposición para oscurecer el fondo */
+.background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Oscurece la imagen de fondo */
+    z-index: 2; /* Colocar la superposición encima de la imagen */
+    border-radius: 20px;
+}
+
+/* Contenedor del contenido (texto + formulario) */
+.center-container {
+    position: relative;
+    display: flex; /* Alineación en fila para que estén uno al lado del otro */
+    justify-content: center; /* Centrar ambos elementos horizontalmente */
+    align-items: center; /* Centrar verticalmente ambos elementos */
+    gap: 0px; /* Espacio reducido entre los dos contenedores */
+    z-index: 3; /* Colocar el contenido por encima de la imagen y la superposición */
+}
+/* Estilos para la imagen en la parte superior */
+.left-image {
+    position:absolute;
+    width:70%; /* Ajusta el ancho según necesites */
+    opacity: 15%;
+    margin-bottom: 0px; /* Espacio entre la imagen y el texto */
+    border-radius: 10px; /* Bordes redondeados si deseas */
+}
+/* Texto a la izquierda */
+.left-content {
+    display: flex;
+    flex-direction: column; /* Coloca la imagen y el texto en columna */
+    justify-content: center; /* Centra verticalmente el contenido restante */
+    align-items: center; /* Centra horizontalmente el contenido */
+    width: 400px;
+    height: 500px;
+    color: white;
+    padding: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semitransparente */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    position: relative; /* Asegura que los elementos se alineen correctamente */
+}
+
+
+/* Ajusta el tamaño de la cabecera según la necesidad */
+.left-content h1 {
+    font-family: 'Roboto', sans-serif; /* Aplicar la fuente Roboto */
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.5;
+    margin: 0; /* Eliminar márgenes no deseados */
+    text-align: center; /* Centra el texto */
+}
+
+/* Título del formulario */
+.login-form-container h2 {
+    font-size: 30px;
+    font-weight: 400; /* Poppins Regular */
+    margin-bottom: 20px;
+    text-align: center; /* Centrar el texto */
+    font-family: 'Poppins', sans-serif; /* Aplicar la fuente Poppins */
+}
+/* Contenedor del formulario de inicio de sesión */
+.login-form-container {
+    width: 400px;
+    height: 500px;
+    background-color: #ffffff; /* Fondo blanco con opacidad */
+    padding: 30px;
+    border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); /* Sombra */
+    text-align: left;
+}
+/* Estilo de los campos del formulario */
+.login-form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Estilo del botón de iniciar sesión */
+.login-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #4b0082;
+    color: white;
+    border: none;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.login-btn:hover {
+    background-color: #6a0dad;
+}
+
+/* Estilo del enlace para registrarse */
+.no-account a {
+    color: #4b0082;
+    text-decoration: none;
+}
+
+.no-account a:hover {
+    text-decoration: underline;
+}
+
+
+
+/*FOOTEEEEERR*/
+
+
+/* Estilo general del footer */
+.footer {
+    display: flex;
+    justify-content: space-between; /* Distribuir elementos de izquierda a derecha */
+    align-items: center;
+    background-color: #e5e5e5; /* Fondo claro */
+    padding: 10px 20px; /* Espaciado vertical reducido a 10px */
+    border-top: 2px solid #000; /* Línea superior */
+    height: 45px;
+}
+
+/* Estilo del contenedor izquierdo con el logo */
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo del logo */
+.footer-logo {
+    width: 70px; /* Ajustar tamaño del logo */
+    height: auto;
+}
+
+/* Estilo del contenedor central */
+.footer-center {
+    text-align: center;
+    font-size: 14px; /* Tamaño de letra */
+    color: #000;
+}
+
+/* Contenedor de íconos de redes sociales */
+.footer-right {
+    display: flex;
+    gap: 20px; /* Separación entre íconos */
+}
+
+/* Estilo de los íconos */
+.footer-icon img {
+    width: 25px; /* Tamaño de cada ícono */
+    height: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover para los íconos */
+.footer-icon img:hover {
+    transform: scale(1.1); /* Aumentar tamaño al pasar el cursor */
+}
+

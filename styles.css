@@ -1,0 +1,523 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family:'Open Sans', sans-serif;
+    background-color: #3f3f3f;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+h2{
+    font-family:'Courier New', Courier, monospace;
+}
+
+header {
+    width: 100%;
+    background-color: #e5e5e5;
+    border-bottom: 1px solid #ffffff;
+    position: fixed; /* Mantener fija en la parte superior */
+    top: 0; /* Ubicar en la parte superior de la ventana */
+    z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+}
+
+
+/* Estilo general de la barra de navegación */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+}
+
+/* Estilo de los enlaces de navegación */
+.navbar a {
+    font-size: 16px;
+    color: #000; /* Color del texto */
+    text-decoration: none;
+    margin: 0 15px; /* Espaciado horizontal entre enlaces */
+    transition: transform 0.3s ease, color 0.3s ease; /* Transición suave para el agrandamiento */
+}
+
+/* Efecto hover para los enlaces de navegación */
+.navbar a:hover {
+    transform: scale(1.2); /* Aumentar tamaño a 120% */
+    color: #4b0082; /* Cambiar el color del texto al pasar el cursor */
+}
+
+/* Estilo del logo */
+.logo img {
+    height: 40px;
+}
+
+/* Estilo del contenedor de búsqueda */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    border: 1px solid #000000;
+    border-radius: 40px;
+    padding: 8px 15px;
+    width: 400px;
+    height: 25px;
+}
+
+.search-button {
+    border: none;
+    background: none;
+    margin-left: -40px;
+    cursor: pointer;
+}
+
+/* Estilo de la lista de enlaces */
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+/* Ajuste de estilo de cada enlace */
+.nav-links li a {
+    text-decoration: none;
+    color: #000000;
+    padding: 5px 10px;
+}
+
+/* Efecto hover para los enlaces de lista */
+.nav-links li a:hover {
+    border-bottom: 2px solid #333;
+}
+
+/* Estilo del contenedor de cuenta */
+.account-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.toggle-button{
+    border: none;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+/* Estilo para el contenedor que agrupa el login y el botón de cuenta */
+.account-combined {
+    display: flex; /* Flexbox para alinear los elementos */
+    align-items: center; /* Alinear verticalmente en el centro */
+    gap: 10px; /* Espacio entre el icono de login y el botón */
+    border-radius: 20px;
+}
+
+/* Botón de cuenta */
+.account-button {
+    margin-right: 10px;
+    padding: 5px 15px; /* Ajuste de padding */
+    display: flex; /* Flexbox para el contenido */
+    align-items: center; /* Alinear verticalmente en el centro */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #cecece; /* Color de fondo */
+    color: rgb(0, 0, 0); /* Color de texto */
+}
+.account-button:hover{
+    background-color:#ffffff;
+}
+/* Estilo del icono de login */
+.login img {
+    margin-left: 10px;
+    height: 30px;
+    float: right;
+    margin-right: 0%;
+}
+
+
+.hero {
+    height: 400px;
+    background-color: #000000;
+    color: white;
+    display: flex;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin: 0% 5%;
+    margin-top: 20px;
+    padding: 0;
+    align-items: center;
+}
+
+.hero-images img {
+    border-top-right-radius: 200px;
+    border-bottom-right-radius: 200px;
+    border-top-left-radius: 20px;
+    width: 800px;
+    height: 400px;
+}
+
+/* Contenedor de la parte derecha */
+.hero-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+}
+
+/* Sección principal de Comprar y Vender */
+.buy-sell-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #ffffff;
+    color: black;
+    border-radius: 20px;
+    padding: 20px;
+    width: 400px;
+    height: 250px;
+    border: 2px solid #000000; /* Añadir borde al contenedor principal */
+}
+.buy-sell-section :hover {
+    transform: scale(1.05);
+    transition: transform 0.5s ease, color 0.5s ease; 
+}
+
+/* Cuadro individual para cada sección */
+.box {
+    background-color: #e5e5e5; /* Fondo claro para distinguir el cuadro */
+    border: 2px solid #cccccc; /* Borde de cada cuadro */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 15px;
+    width: 150px; /* Ancho de cada cuadro */
+    height: 200px; /* Altura de cada cuadro */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos específicos de cada sección */
+.buy-section, .sell-section {
+    text-align: center;
+}
+
+.buy-section h2, .sell-section h2 {
+    font-size: 22px; /* Tamaño más grande para los títulos */
+    margin-bottom: 10px;
+}
+
+.buy-section p, .sell-section p {
+    font-size: 18px; /* Tamaño más grande para el texto */
+    margin: 5px 0;
+}
+
+/* Separador */
+.separator {
+    width: 2px;
+    height: 300px;
+    background-color: #000000;
+    margin: 0 20px;
+}
+
+/* Estilos para los botones */
+button {
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px; /* Tamaño de letra de los botones */
+}
+
+button:hover {
+    background-color: #f0f0f0;
+}
+
+.sell-section img {
+    margin-top: 10px;
+}
+
+.sell-section img {
+    margin-top: 10px;
+}
+
+
+.categories {
+    position: relative; /* Relativa para que los elementos con absolute se posicionen dentro */
+    padding: 20px;
+    background: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: center;
+}
+
+.categories h2 {
+    margin-left: 30px;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* Contenedor principal para categorías y texto */
+.category-container {
+    display: flex; /* Usar flexbox para alinear los bloques */
+    width: 100%;
+    align-items: flex-start; /* Alinear los elementos en la parte superior */
+
+}
+
+/* Bloque de imágenes de categorías */
+.category-list {
+    display: flex; /* Usar flexbox para organizar las categorías */
+    gap: 20px; /* Espacio entre las categorías */
+    width: 80%; /* Ancho para el bloque de categorías */
+}
+
+/* Estilo de cada categoría */
+.category {
+    margin-left: 30px;
+    width: 210px; /* Ancho fijo para cada categoría */
+    text-align: center; /* Centrar texto */
+}
+
+/* Estilo de las imágenes de las categorías */
+.category img {
+    width: 100%; /* Ajustar imagen al ancho del contenedor */
+    height: auto; /* Altura automática para mantener proporciones */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Efecto hover en imágenes de categorías */
+.category img:hover {
+    transform: scale(1.05); /* Aumentar tamaño a 105% */
+    transition: transform 0.8s ease, color 0.5s ease; 
+    box-shadow: 5px 2.5px 10px 5px #5c4671; /* Sombra morada alrededor de la imagen */
+}
+
+/* Estilo del texto en categorías */
+.category p {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family:'Open Sans', sans-serif;
+
+}
+
+/* Cuadro contenedor de la imagen a la derecha */
+.invisible-box {
+    position: absolute; /* Posición absoluta dentro del contenedor padre */
+    right: 0; /* Alineado al borde derecho */
+    top: 0; /* Alineado al borde superior */
+    bottom: 0; /* Alineado al borde inferior */
+    width: 30%; /* Ancho del cuadro contenedor */
+}
+
+/* Imagen que se alinea y ajusta a las esquinas del cuadro */
+.invisible-box img {
+    position: absolute; /* Imagen posicionada dentro del contenedor */
+    top: 0; /* Alineada a la parte superior */
+    right: 0; /* Alineada a la derecha */
+    bottom: 0; /* Alineada a la parte inferior */
+    left: auto; /* Alineada a la izquierda para que cubra todo el cuadro */
+    width: 70%; /* Ancho de la imagen que se ajuste al contenedor */
+    height: 100%; /* Altura de la imagen que se ajuste al contenedor */
+    object-fit: cover; /* Mantener proporción y cubrir todo el contenedor */
+    border-top-left-radius: 150px; /* Ajustar bordes redondeados si es necesario */
+    border-bottom-left-radius: 150px;
+    border-bottom-right-radius: 20px;
+}
+
+
+
+
+/* Contenedor principal para la sección de marcas */
+.brands {
+    margin-top: 2%;
+    background: white;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius:20px;
+    text-align: center;
+    position: relative; /* Necesario para posicionar elementos hijos absolutos */
+}
+.brands h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    margin-top: 30px;
+}
+/* Contenedor principal de imagen y logos */
+.brand-container {
+    display: flex; /* Disposición en bloque flex */
+    width: 100%;
+    align-items: center; /* Alinear verticalmente */
+    position: relative; /* Necesario para la posición absoluta de la imagen */
+}
+
+/* Invisible box para la imagen a la izquierda */
+.invisible-box2 {
+    position: absolute; /* Posición absoluta dentro del contenedor */
+    left: 0; /* Alineado al borde izquierdo */
+    top: 0; /* Alineado al borde superior */
+    bottom: 0; /* Alineado al borde inferior */
+    width: 30%; /* Ancho del cuadro contenedor */
+
+}
+
+/* Imagen dentro del invisible box */
+.invisible-box2 img {
+    position: absolute;
+    top: 0; /* Alineada a la parte superior */
+    left: 0; /* Alineada al borde izquierdo */
+    bottom: 0;
+    right: auto;
+    width: 70%; /* Ajustar el ancho de la imagen al contenedor */
+    height: 100%; /* Ajustar la altura de la imagen al contenedor */
+    border-top-right-radius: 150px; /* Bordes redondeados */
+    border-bottom-right-radius: 150px;
+    border-top-left-radius: 20px; /* Asegurarse de que no haya bordes redondeados */
+    border-bottom-left-radius: 20px;
+
+}
+
+/* Contenedor de logos de marcas */
+.brand-list {
+    display: flex; /* Disposición en columna */
+    flex-direction: column; /* Organizar filas de logos */
+    justify-content: center; /* Alinear verticalmente */
+    width: 65%; /* Ancho para el contenedor de los logos */
+    margin-left: 25%; /* Dejar espacio para la imagen de la izquierda */
+}
+
+/* Fila de logos */
+.row {
+    display: flex; /* Disposición en fila */
+    justify-content: space-around; /* Espacio entre logos */
+    margin-bottom: 20px; /* Espacio entre filas */
+}
+
+/* Estilo de cada logo */
+.brand {
+    width: 200px; /* Ancho fijo para cada logo */
+}
+
+/* Estilo para las imágenes de los logos */
+.brand img {
+    height: 100px; /* Mantener proporciones */
+    border-radius: 12px; /* Bordes redondeados */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Efecto hover para cada logo */
+.brand img:hover {
+    transform: scale(1.05); /* Efecto hover aumentando tamaño */
+    transition: transform 0.8s ease, color 0.5s ease; 
+    box-shadow: 5px 2.5px 10px 5px #5c4671; /* Sombra morada alrededor de la imagen */
+
+}
+
+
+/* Sección About */
+.about {
+    display: flex; /* Flexbox para el contenedor principal */
+    background-color: #f2f2f2; /* Fondo claro */
+    margin: 20px 5%; /* Espacio alrededor */
+    height: 275px;
+}
+
+/* Contenedor de Texto */
+.about-content {
+    display: flex; /* Flexbox para organizar el texto */
+    flex-direction: row; /* Organizar en columnas */
+    justify-content: space-between; /* Asegurar espacio entre los textos */
+    gap: 30px; /* Espacio entre los bloques de texto */
+}
+
+/* Texto Izquierda */
+.about-text.left-text {
+    flex: 1; /* Ocupa espacio equitativo */
+    margin-right: 10px; /* Espaciado derecho */
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+/* Texto Derecho */
+.about-text.right-text {
+    flex: 1; /* Ocupa el mismo espacio que el izquierdo */
+    border-left: 2px solid #000; /* Línea divisoria */
+    padding-left: 20px;
+    margin-top: 55px;
+}
+
+/* Imagen */
+.about-image {
+    flex: 1; /* Imagen ocupa el 40% restante del contenedor principal */
+    display: flex;
+    justify-content: center; /* Centrar la imagen */
+}
+
+.about-image img {
+    border-top-left-radius: 100px; /* Bordes redondeados superiores */
+    border-bottom-left-radius: 100px; /* Bordes redondeados inferiores */
+    width: 300px; /* Ajustar ancho de la imagen */
+    height: auto; /* Mantener proporción */
+}
+
+
+/* Estilo general del footer */
+.footer {
+    display: flex;
+    justify-content: space-between; /* Distribuir elementos de izquierda a derecha */
+    align-items: center;
+    background-color: #e5e5e5; /* Fondo claro */
+    padding: 10px 20px; /* Espaciado vertical reducido a 10px */
+    border-top: 2px solid #000; /* Línea superior */
+    height: 45px;
+}
+
+/* Estilo del contenedor izquierdo con el logo */
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo del logo */
+.footer-logo {
+    width: 70px; /* Ajustar tamaño del logo */
+    height: auto;
+}
+
+/* Estilo del contenedor central */
+.footer-center {
+    text-align: center;
+    font-size: 14px; /* Tamaño de letra */
+    color: #000;
+}
+
+/* Contenedor de íconos de redes sociales */
+.footer-right {
+    display: flex;
+    gap: 20px; /* Separación entre íconos */
+}
+
+/* Estilo de los íconos */
+.footer-icon img {
+    width: 25px; /* Tamaño de cada ícono */
+    height: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover para los íconos */
+.footer-icon img:hover {
+    transform: scale(1.1); /* Aumentar tamaño al pasar el cursor */
+}
+
