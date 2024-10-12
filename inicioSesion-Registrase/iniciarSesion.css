@@ -22,7 +22,6 @@ header {
 }
 
 
-
 /* Estilo general de la barra de navegación */
 .navbar {
     display: flex;
@@ -245,7 +244,7 @@ header {
 .login-form-container {
     width: 400px;
     height: 500px;
-    background-color: #ffffff; /* Fondo blanco con opacidad */
+    background-image: url('../Imagenes/Fondos/fondoTexturizado2.jpg'); /* Ruta de la imagen */
     padding: 30px;
     border-bottom-right-radius: 20px;
     border-top-right-radius: 20px;
@@ -257,6 +256,19 @@ header {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+/* Estilo de los campos del formulario */
+.login-form-container label {
+    display: block;
+    margin-bottom: 10px; /* Espacio entre el label y el input */
+}
+
+.login-form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px; /* Incrementa el margen inferior para mayor separación */
     border: 1px solid #ccc;
     border-radius: 8px;
 }
@@ -277,6 +289,11 @@ header {
 
 .login-btn:hover {
     background-color: #6a0dad;
+}
+
+.no-account {
+    text-align: center;
+    margin-top: 15px; /* Aumenta la separación con el botón */
 }
 
 /* Estilo del enlace para registrarse */
