@@ -1,11 +1,111 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="venderCoche.css">
+    <link rel="shortcut icon" href="../Imagenes/Logos/Logo-modified.png" />
+    <title>JDMDrive</title>
 </head>
+
 <body>
-    
+    <header>
+        <nav class="navbar">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="../index.html"><img src="../Imagenes/Logos/JDMDrive.png" alt="JDMDrive Logo"></a>
+            </div>
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="#about">Sobre Nosotros</a></li>
+                <li><a href="#">Noticias</a></li>
+                <li><a href="#">Comprar</a></li>
+                <li><a href="#">Vender</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h2>Fotos de tu coche</h2>
+        <div class="photo-upload">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z'/%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M15 13a3 3 0 11-6 0 3 3 0 016 0z'/%3E%3C/svg%3E"
+                alt="Camera icon">
+            <button class="button button-upload">Subir fotografías</button>
+        </div>
+
+        <div class="form-section">
+            <div class="form-row">
+                <div class="form-group">
+                    <h3>Información del vehículo</h3>
+                    <label for="marca">Marca</label>
+                    <input type="text" id="marca" placeholder="marca *">
+
+                    <label for="modelo">Modelo</label>
+                    <input type="text" id="modelo" placeholder="modelo *">
+
+                    <label for="ano">Año</label>
+                    <input type="text" id="ano" placeholder="año *">
+                </div>
+                <div class="form-group">
+                    <h3>Extra</h3>
+                    <label for="color">Color</label>
+                    <input type="text" id="color" placeholder="color *">
+
+                    <label for="potencia">Potencia</label>
+                    <input type="text" id="potencia" placeholder="potencia *">
+
+                    <label for="tuneado">Tuneado</label>
+                    <input type="text" id="tuneado" placeholder="tuneado (si/no) *">
+                </div>
+            </div>
+            <button class="button button-continue">Continuar</button>
+        </div>
+
+        <div class="form-section">
+            <h3>Datos de contacto</h3>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="codigo-postal">Código Postal</label>
+                    <input type="text" id="codigo-postal" placeholder="código postal *">
+
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" placeholder="nombre *">
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono</label>
+                    <input type="tel" id="telefono" placeholder="999887766 *">
+
+                    <label for="email">Email</label>
+                    <input type="email" id="email" placeholder="correo@ejemplo.com *">
+                </div>
+            </div>
+        </div>
+
+        <button class="button button-sell">Vender</button>
+    </main>
+    <footer class="footer">
+        <!-- Contenedor izquierdo con el logo -->
+        <div class="footer-left">
+            <img src="../Imagenes/Logos/JDMDrive.png" alt="JDMDrive Logo" class="footer-logo">
+        </div>
+
+        <!-- Contenedor central con el texto de derechos reservados -->
+        <div class="footer-center">
+            <p>©2024. JDMDrive Todos los derechos reservados.</p>
+        </div>
+
+        <!-- Contenedor derecho con los íconos de redes sociales -->
+        <div class="footer-right">
+            <a title="icr0015@alu.medac.es" href="#" class="footer-icon"><img src="../Imagenes/RRSS-COPY/gmail.png"
+                    alt="Email Icon"></a>
+            <a href="https://x.com/IvnCr33" class="footer-icon"><img src="../Imagenes/RRSS-COPY/x-removebg-preview.png"
+                    alt="Twitter Icon"></a>
+            <a href="https://www.instagram.com/ivn.cr/profilecard/" class="footer-icon"><img
+                    src="../Imagenes/RRSS-COPY/Instagram.webp" alt="Instagram Icon"></a>
+            <a href="https://www.tiktok.com/@ivvn.cr?_t=8qGUB5DLv84&_r=1" class="footer-icon"><img
+                    src="../Imagenes/RRSS-COPY/tiktok.webp" alt="Tiktok Icon"></a>
+        </div>
+    </footer>
 </body>
+
 </html>
