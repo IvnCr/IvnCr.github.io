@@ -11,14 +11,17 @@ html {
 h2{
     font-family:'Courier New', Courier, monospace;
 }
-
+main{
+    margin-left: 5%;
+    margin-right: 5%;
+}
 header {
     width: 100%;
     background-color: #e5e5e5;
     border-bottom: 1px solid #ffffff;
     position: fixed; /* Mantener fija en la parte superior */
     top: 0; /* Ubicar en la parte superior de la ventana */
-    z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+    z-index: 9999;
 }
 
 
@@ -28,6 +31,11 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 5px 20px;
+    
+}
+.navbar {
+    position: relative; /* o 'fixed' si quieres que se mantenga fija mientras haces scroll */
+    z-index: 9999; /* Un valor alto para asegurar que siempre esté encima de otros elementos */
 }
 
 /* Estilo de los enlaces de navegación */
@@ -134,7 +142,92 @@ header {
     margin-right: 0%;
 }
 
+/* Sección de Noticias */
+.news-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
 
+/* Título de la Sección */
+.section-title {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+    color: #4b0082;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Contenedor de Tarjetas de Noticias */
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 45px;
+}
+
+/* Tarjetas de Noticias */
+.news-card {
+    border: 1px solid #e0e0e0; /* Borde gris claro */
+    background-color: #fafafa;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    
+}
+
+.news-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 10px #4b0082;
+
+}
+
+/* Logo de la Noticia */
+.news-logo {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    background-color: #f0f0f0;
+    padding: 10px;
+}
+
+/* Contenido de la Noticia */
+.news-content {
+    padding: 20px;
+}
+
+.news-title {
+    font-size: 22px;
+    color: #4b0082;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.news-description {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Enlace de Leer Más */
+.news-link {
+    display: block;
+    text-align: center;
+    padding: 10px 15px;
+    background-color: #4b0082;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.news-link:hover {
+    background-color: #6a0dad;
+}
 
 
 

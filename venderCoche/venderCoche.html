@@ -26,62 +26,79 @@
         </nav>
     </header>
     <main>
-        <h2>Fotos de tu coche</h2>
+        <h1>Fotos de tu coche</h1>
         <div class="photo-upload">
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z'/%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M15 13a3 3 0 11-6 0 3 3 0 016 0z'/%3E%3C/svg%3E"
-                alt="Camera icon">
-            <button class="button button-upload">Subir fotografías</button>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z'%3E%3C/path%3E%3Ccircle cx='12' cy='13' r='4'%3E%3C/circle%3E%3C/svg%3E" alt="Camera icon">
+            <br>
+            <button>Subir fotografías</button>
         </div>
-
         <div class="form-section">
+            <h2>Informacion del vehiculo</h2>
             <div class="form-row">
                 <div class="form-group">
-                    <h3>Información del vehículo</h3>
                     <label for="marca">Marca</label>
-                    <input type="text" id="marca" placeholder="marca *">
-
-                    <label for="modelo">Modelo</label>
-                    <input type="text" id="modelo" placeholder="modelo *">
-
-                    <label for="ano">Año</label>
-                    <input type="text" id="ano" placeholder="año *">
+                    <input type="text" id="marca" name="marca" placeholder="marca *">
                 </div>
                 <div class="form-group">
-                    <h3>Extra</h3>
-                    <label for="color">Color</label>
-                    <input type="text" id="color" placeholder="color *">
-
-                    <label for="potencia">Potencia</label>
-                    <input type="text" id="potencia" placeholder="potencia *">
-
-                    <label for="tuneado">Tuneado</label>
-                    <input type="text" id="tuneado" placeholder="tuneado (si/no) *">
+                    <label for="modelo">Modelo</label>
+                    <input type="text" id="modelo" name="modelo" placeholder="modelo *">
                 </div>
             </div>
-            <button class="button button-continue">Continuar</button>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="ano">Año</label>
+                    <input type="text" id="ano" name="ano" placeholder="año *">
+                </div>
+            </div>
         </div>
-
         <div class="form-section">
-            <h3>Datos de contacto</h3>
+            <h2>Extra</h2>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="color">Color</label>
+                    <input type="text" id="color" name="color" placeholder="color *">
+                </div>
+                <div class="form-group">
+                    <label for="potencia">Potencia</label>
+                    <input type="text" id="potencia" name="potencia" placeholder="potencia *">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="tuneado">Tuneado</label>
+                    <input type="text" id="tuneado" name="tuneado" placeholder="tuneado si/no*">
+                </div>
+            </div>
+        </div>
+        <div class="button-container">
+            <button>Continuar</button>
+        </div>
+        <div class="form-section">
+            <h2>Datos de contacto</h2>
             <div class="form-row">
                 <div class="form-group">
                     <label for="codigo-postal">Código Postal</label>
-                    <input type="text" id="codigo-postal" placeholder="código postal *">
-
-                    <label for="nombre">Nombre</label>
-                    <input type="text" id="nombre" placeholder="nombre *">
+                    <input type="text" id="codigo-postal" name="codigo-postal" placeholder="codigo postal *">
                 </div>
                 <div class="form-group">
                     <label for="telefono">Teléfono</label>
-                    <input type="tel" id="telefono" placeholder="999887766 *">
-
+                    <input type="text" id="telefono" name="telefono" placeholder="999887766 *">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="nombre *">
+                </div>
+                <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" placeholder="correo@ejemplo.com *">
+                    <input type="text" id="email" name="email" placeholder="correo@ejemplo.com *">
                 </div>
             </div>
         </div>
-
-        <button class="button button-sell">Vender</button>
+        <div class="button-container">
+            <button>Vender</button>
+        </div>
     </main>
     <footer class="footer">
         <!-- Contenedor izquierdo con el logo -->
