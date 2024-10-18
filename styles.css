@@ -6,6 +6,10 @@ html {
     background-color: #3f3f3f;
 }
 
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400; /* Regular */
+}
 html {
     scroll-behavior: smooth;
 }
