@@ -146,49 +146,79 @@ header {
 }
 
 .form-busqueda {
-    background-color: #e6e6e6;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 30%;
+    background-color: #e5e5e5; /* Fondo gris claro */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
+    width: 25%; /* Ajustamos el ancho del formulario */
+    max-width: 350px; /* Máximo ancho */
+    margin: 0 auto; /* Centrado */
 }
 
 .form-busqueda h2 {
-    font-size: 1.5em;
+    font-size: 1.8em;
+    color: #333;
     margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
 }
 
-.form-busqueda input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
+.form-busqueda input,
 .form-busqueda select {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+    width: 90%; /* Mantener 100% del ancho del contenedor */
+    padding: 10px; 
+    margin: 10px 0; 
+    border-radius: 8px;
+    border: 1px solid #bbb;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); 
+    transition: border-color 0.3s ease;
 }
-.form-busqueda button {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #ccc;
+
+.form-busqueda input:focus,
+.form-busqueda select:focus {
+    border-color: #6c0086; 
+    outline: none;
 }
 
 .form-busqueda button {
-    background-color: #6c0086;
+    width: 100%; 
+    padding: 12px; 
+    margin: 20px 0;
+    border-radius: 8px;
+    border: none;
+    background-color: #6c0086; 
     color: white;
+    font-size: 1em;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
+
+.form-busqueda button:hover {
+    background-color: #58006b;
+}
+
+@media (max-width: 768px) {
+    .form-busqueda {
+        width: 80%; /* Ajuste de ancho para pantallas más pequeñas */
+    }
+}
+
 
 .lista-coches {
     margin-top: 5%;
     width: 65%;
+}
+
+/* Quitar el subrayado del enlace y heredar los colores */
+a {
+    text-decoration: none; /* Eliminar subrayado */
+    color: inherit; /* Asegurar que herede el color del texto */
+}
+
+/* Efecto hover sobre la tarjeta coche */
+a:hover .coche {
+    transform: scale(1.02); /* Agranda ligeramente la tarjeta */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .coche {
@@ -196,22 +226,23 @@ header {
     align-items: center;
     background-color: white;
     margin-bottom: 20px;
-    padding: 15px;
+    padding: 20px;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     border: 1px solid #ccc;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
 .coche img {
     max-width: 250px;
     border-radius: 10px;
-    margin-right: 15px; /* Añadir un margen a la derecha para espacio */
+    margin-right: 20px;
 }
 
 .info-coche {
     display: flex;
-    flex-direction: column; /* Cambiar a columna para organizar los elementos */
+    flex-direction: column;
     justify-content: space-between;
     width: 100%;
 }
@@ -222,9 +253,9 @@ header {
 }
 
 .info-detalles {
-    display: flex; /* Usar flex para alinear potencia y tuneado en fila */
-    justify-content: space-between; /* Espaciado uniforme entre elementos */
-    margin: 5px 0; /* Añadir margen para separación */
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
 }
 
 .info-coche p {
@@ -241,7 +272,6 @@ header {
     color: #888;
     font-size: 0.9em;
 }
-
 
 
 

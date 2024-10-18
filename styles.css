@@ -23,11 +23,8 @@ header {
     background-color: #e5e5e5;
     border-bottom: 1px solid #ffffff;
     position: fixed;
-    /* Mantener fija en la parte superior */
     top: 0;
-    /* Ubicar en la parte superior de la ventana */
     z-index: 1000;
-    /* Asegurar que esté por encima de otros elementos */
 }
 
 
@@ -122,11 +119,8 @@ header {
 /* Estilo para el contenedor que agrupa el login y el botón de cuenta */
 .account-combined {
     display: flex;
-    /* Flexbox para alinear los elementos */
     align-items: center;
-    /* Alinear verticalmente en el centro */
     gap: 10px;
-    /* Espacio entre el icono de login y el botón */
     border-radius: 20px;
 }
 
