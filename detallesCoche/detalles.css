@@ -139,141 +139,125 @@ header {
     margin-right: 0%;
 }
 
-.container {
-    display: flex;
-    justify-content: space-between;
+
+
+main {
+    margin: 5%;
+    margin-top: 7%;
     padding: 20px;
-}
-
-.form-busqueda {
-    background-color: #e5e5e5; /* Fondo gris claro */
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
-    width: 25%; /* Ajustamos el ancho del formulario */
-    max-width: 350px; /* Máximo ancho */
-    margin: 0 auto; /* Centrado */
-}
-
-.form-busqueda h2 {
-    font-size: 1.8em;
-    color: #333;
-    margin-bottom: 20px;
-    text-align: center;
-    font-weight: bold;
-}
-
-.form-busqueda input,
-.form-busqueda select {
-    width: 90%; /* Mantener 100% del ancho del contenedor */
-    padding: 10px; 
-    margin: 10px 0; 
     border-radius: 8px;
-    border: 1px solid #bbb;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); 
-    transition: border-color 0.3s ease;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-
-.form-busqueda input:focus,
-.form-busqueda select:focus {
-    border-color: #6c0086; 
-    outline: none;
-}
-
-.form-busqueda button {
-    width: 100%; 
-    padding: 12px; 
-    margin: 20px 0;
-    border-radius: 8px;
-    border: none;
-    background-color: #6c0086; 
-    color: white;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.form-busqueda button:hover {
-    background-color: #58006b;
-}
-
-@media (max-width: 768px) {
-    .form-busqueda {
-        width: 80%; /* Ajuste de ancho para pantallas más pequeñas */
-    }
-}
-
-
-.lista-coches {
-    margin-top: 5%;
-    width: 65%;
-}
-
-/* Quitar el subrayado del enlace y heredar los colores */
-a {
-    text-decoration: none; /* Eliminar subrayado */
-    color: inherit; /* Asegurar que herede el color del texto */
-}
-
-/* Efecto hover sobre la tarjeta coche */
-a:hover .coche {
-    transform: scale(1.02); /* Agranda ligeramente la tarjeta */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
-
-.coche {
+/* Contenedor principal */
+.carro-contenedor {
     display: flex;
-    align-items: center;
-    background-color: white;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    border: 1px solid #ccc;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    gap: 20px;
 }
 
-.coche img {
-    max-width: 250px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-right: 20px;
+/* Sección de imágenes del carro */
+.imagenes-carro {
+    flex: 2;
 }
 
-.info-coche {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+.imagen-principal-carro {
     width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
-.info-coche h3 {
-    margin: 0;
-    color: #6c0086;
+/* Miniaturas del carro */
+.contenedor-miniaturas {
+    display: flex;
+    gap: 10px;
 }
 
-.info-detalles {
+.miniatura {
+    width: calc(33.333% - 7px);
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Sección de detalles del carro */
+.detalles-carro {
+    flex: 1;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+/* Título e información del carro */
+.titulo-carro {
     display: flex;
     justify-content: space-between;
-    margin: 5px 0;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-.info-coche p {
-    margin: 5px 0;
-}
-
-.precio {
-    font-size: 1.5em;
+.nombre-carro {
+    font-size: 1.2em;
     font-weight: bold;
-    color: #d40000;
 }
 
-.garantia {
-    color: #888;
-    font-size: 0.9em;
+.precio-carro {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4a0e4e;
 }
 
+/* Formulario de compra */
+.formulario-compra-carro {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.formulario-compra-carro h2 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Grupos de formulario */
+.grupo-formulario {
+    margin-bottom: 15px;
+}
+
+.grupo-formulario label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.grupo-formulario input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Botón de comprar */
+.boton-comprar {
+    width: 100%;
+    padding: 10px;
+    background-color: #4a0e4e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.boton-comprar:hover {
+    background-color: #3a0b3e;
+}
+
+/* Logo del carro */
+.logo-carro {
+    width: 100px;
+    height: auto;
+    margin-top: 20px;
+}
 
 
 /* Estilo general del footer */

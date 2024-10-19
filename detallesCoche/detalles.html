@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Coche</title>
+    <link rel="stylesheet" href="./detalles.css">
+    <link rel="shortcut icon" href="../Imagenes/Logos/Logo-modified.png" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="../index.html"><img src="../Imagenes/Logos/JDMDrive.png" alt="JDMDrive Logo"></a>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" placeholder="=  Búsqueda" class="search-bar">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="../index.html">Sobre Nosotros</a></li>
+                <li><a href="../noticias/noticias.html">Noticias</a></li>
+                <li><a href="#">Comprar</a></li>
+                <li><a href="../venderCoche/venderCoche.html">Vender</a></li>
+            </ul>
+
+            <!-- Icons and Account -->
+            <div class="account-container">
+                <button class="toggle-button">
+                    <i class="fas fa-toggle-on"></i>
+                </button>
+                <!-- Contenedor de la cuenta y el logo de login -->
+                <div class="account-combined">
+                    <!-- Icono del logo -->
+                    <div class="login">
+                        <img src="../Imagenes/login.png" alt="Login">
+                    </div>
+
+                    <!-- Botón de cuenta -->
+                    <a href="../inicioSesion-Registrase/iniciarSesion.html" class="account-button">
+                        Mi Cuenta
+                    </a>
+                </div>
+        </nav>
+    </header>
+    <main>
+        <div class="carro-contenedor">
+            <div class="imagenes-carro">
+                <img src="../Imagenes/fotosMarcasCoches/Mitsubishi/EvoIX_Tuning.jpg" alt="Mitsubishi Lancer Evo IX"
+                    class="imagen-principal-carro">
+                <div class="contenedor-miniaturas">
+                    <img src="../Imagenes/fotosMarcasCoches/Mitsubishi/EvoIX_Tuning_Trasera.jpg" alt="Vista trasera"
+                        class="miniatura">
+                    <img src="../Imagenes/fotosMarcasCoches/Mitsubishi/interiorEvoIX.jpg" alt="Vista interior"
+                        class="miniatura">
+                    <img src="../Imagenes/LogosMarcas/logoMitubishi-removebg-preview.png" alt="Logo Mitsubishi"
+                        class="miniatura">
+                </div>
+            </div>
+            <div class="detalles-carro">
+                <div class="titulo-carro">
+                    <span class="nombre-carro">Mitsubishi Lancer Evo IX 320 cv</span>
+                    <span class="precio-carro">30.000 €</span>
+                </div>
+                <form class="formulario-compra-carro">
+                    <h2>COMPRAR COCHE</h2>
+                    <div class="grupo-formulario">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" value="Mitsubishi Lancer Evo IX" readonly>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="potencia">Potencia</label>
+                        <input type="text" id="potencia" name="potencia" value="250cv" readonly>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="ano">Año</label>
+                        <input type="text" id="ano" name="ano" value="2006" readonly>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="color">Color</label>
+                        <input type="text" id="color" name="color" value="Gris" readonly>
+                    </div>
+                    <div class="grupo-formulario">
+                        <label for="tuneado">Tuneado</label>
+                        <input type="text" id="tuneado" name="tuneado" value="Si" readonly>
+                    </div>
+                    <button type="submit" class="boton-comprar">Comprar</button>
+                </form>
+            </div>
+        </div>
+
+    </main>
+    <footer class="footer">
+        <!-- Contenedor izquierdo con el logo -->
+        <div class="footer-left">
+            <img src="../Imagenes/Logos/JDMDrive.png" alt="JDMDrive Logo" class="footer-logo">
+        </div>
+
+        <!-- Contenedor central con el texto de derechos reservados -->
+        <div class="footer-center">
+            <p>©2024. JDMDrive Todos los derechos reservados.</p>
+        </div>
+
+        <!-- Contenedor derecho con los íconos de redes sociales -->
+        <div class="footer-right">
+            <a title="icr0015@alu.medac.es" href="#" class="footer-icon"><img src="../Imagenes/RRSS-COPY/gmail.png"
+                    alt="Email Icon"></a>
+            <a href="https://x.com/IvnCr33" class="footer-icon"><img src="../Imagenes/RRSS-COPY/x-removebg-preview.png"
+                    alt="Twitter Icon"></a>
+            <a href="https://www.instagram.com/ivn.cr/profilecard/" class="footer-icon"><img
+                    src="../Imagenes/RRSS-COPY/Instagram.webp" alt="Instagram Icon"></a>
+            <a href="https://www.tiktok.com/@ivvn.cr?_t=8qGUB5DLv84&_r=1" class="footer-icon"><img
+                    src="../Imagenes/RRSS-COPY/tiktok.webp" alt="Tiktok Icon"></a>
+        </div>
+    </footer>
+</body>
+
+</html>
