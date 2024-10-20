@@ -240,6 +240,13 @@ a:hover .coche {
     border-radius: 10px;
     margin-right: 20px;
 }
+.tuneo-icono {
+    width: 50px; /* Ajusta el tamaño que necesites */
+    height: auto;
+    margin-left: 10px; /* Ajusta el margen según sea necesario */
+    object-fit: contain; /* Para que no se deforme la imagen del ícono */
+    border-radius: 0; /* Sin borde redondeado */
+}
 
 .info-coche {
     display: flex;
