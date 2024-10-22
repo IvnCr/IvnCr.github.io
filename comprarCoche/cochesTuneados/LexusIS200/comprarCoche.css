@@ -1,0 +1,314 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family:'Open Sans', sans-serif;
+    background-color: #3f3f3f;
+}
+html {
+    scroll-behavior: smooth;
+}
+
+h2{
+    font-family:'Courier New', Courier, monospace;
+}
+
+header {
+    width: 100%;
+    background-color: #e5e5e5;
+    border-bottom: 1px solid #ffffff;
+    position: fixed; /* Mantener fija en la parte superior */
+    top: 0; /* Ubicar en la parte superior de la ventana */
+    z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+}
+
+
+/* Estilo general de la barra de navegación */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+}
+
+/* Estilo de los enlaces de navegación */
+.navbar a {
+    font-size: 16px;
+    color: #000; /* Color del texto */
+    text-decoration: none;
+    margin: 0 15px; /* Espaciado horizontal entre enlaces */
+    transition: transform 0.3s ease, color 0.3s ease; /* Transición suave para el agrandamiento */
+}
+
+/* Efecto hover para los enlaces de navegación */
+.navbar a:hover {
+    transform: scale(1.2); /* Aumentar tamaño a 120% */
+    color: #4b0082; /* Cambiar el color del texto al pasar el cursor */
+}
+
+/* Estilo del logo */
+.logo img {
+    height: 40px;
+}
+
+/* Estilo del contenedor de búsqueda */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    border: 1px solid #000000;
+    border-radius: 40px;
+    padding: 8px 15px;
+    width: 400px;
+    height: 25px;
+}
+
+.search-button {
+    border: none;
+    background: none;
+    margin-left: -40px;
+    cursor: pointer;
+}
+
+/* Estilo de la lista de enlaces */
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+/* Ajuste de estilo de cada enlace */
+.nav-links li a {
+    text-decoration: none;
+    color: #000000;
+    padding: 5px 10px;
+}
+
+/* Efecto hover para los enlaces de lista */
+.nav-links li a:hover {
+    border-bottom: 2px solid #333;
+}
+
+/* Estilo del contenedor de cuenta */
+.account-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.toggle-button{
+    border: none;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+/* Estilo para el contenedor que agrupa el login y el botón de cuenta */
+.account-combined {
+    display: flex; /* Flexbox para alinear los elementos */
+    align-items: center; /* Alinear verticalmente en el centro */
+    gap: 10px; /* Espacio entre el icono de login y el botón */
+    border-radius: 20px;
+}
+
+/* Botón de cuenta */
+.account-button {
+    margin-right: 10px;
+    padding: 5px 15px; /* Ajuste de padding */
+    display: flex; /* Flexbox para el contenido */
+    align-items: center; /* Alinear verticalmente en el centro */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #cecece; /* Color de fondo */
+    color: rgb(0, 0, 0); /* Color de texto */
+}
+.account-button:hover{
+    background-color:#ffffff;
+}
+/* Estilo del icono de login */
+.login img {
+    margin-left: 10px;
+    height: 30px;
+    float: right;
+    margin-right: 0%;
+}
+main {
+    position: relative; /* Necesario para posicionar el pseudo-elemento */
+    margin: 7%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    min-height: 100vh;
+    border-radius: 20px;
+    overflow: hidden; /* Para asegurarte de que el pseudo-elemento no se desborde */
+}
+
+main::before {
+    content: ''; /* Necesario para mostrar el pseudo-elemento */
+    position: absolute; /* Posiciona el pseudo-elemento */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('../../../Imagenes/fotosMarcasCoches/Lexus/IS200.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.5; /* Opacidad del 50% */
+}
+
+.form-container {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    background-color: white;
+    border: 15px solid black;
+    padding: 20px;
+    position: relative;
+    width: 500px;
+}
+.form-container2 {
+    margin-top: 2%;
+    background-color: white;
+    border: 15px solid black;
+    padding: 20px;
+    position: relative;
+    width: 500px;
+}
+
+.form-container:first-child {
+    width: 250px;
+}
+
+.icon {
+    position: absolute;
+    height: auto;
+}
+
+.icon-top-left {
+    width:100px;
+    top: -15px;
+    left: -15px;
+}
+
+.icon-top-right1 {
+    width: 60px;
+    top: -0.5px;
+    right: -3px;
+}
+.icon-top-right2 {
+    width: 40px;
+    top: -5px;
+    right: -5px;
+}
+
+.icon-bottom-left {
+    width: 50px;
+    bottom: -15px;
+    left: -15px;
+    transform: rotate(45deg);
+}
+
+h2 {
+    margin-top: 5%;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bold; 
+    font-size: 2em;
+
+}
+
+h3 {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+
+}
+
+input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 5px 0;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #4a0e4e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: 15px;
+}
+
+.submit-btn:hover {
+    background-color: #63136a;
+}
+
+
+
+/* Estilo general del footer */
+.footer {
+    display: flex;
+    justify-content: space-between; /* Distribuir elementos de izquierda a derecha */
+    align-items: center;
+    background-color: #e5e5e5; /* Fondo claro */
+    padding: 10px 20px; /* Espaciado vertical reducido a 10px */
+    border-top: 2px solid #000; /* Línea superior */
+    height: 45px;
+}
+
+/* Estilo del contenedor izquierdo con el logo */
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo del logo */
+.footer-logo {
+    width: 70px; /* Ajustar tamaño del logo */
+    height: auto;
+}
+
+/* Estilo del contenedor central */
+.footer-center {
+    text-align: center;
+    font-size: 14px; /* Tamaño de letra */
+    color: #000;
+}
+
+/* Contenedor de íconos de redes sociales */
+.footer-right {
+    display: flex;
+    gap: 20px; /* Separación entre íconos */
+}
+
+/* Estilo de los íconos */
+.footer-icon img {
+    width: 25px; /* Tamaño de cada ícono */
+    height: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover para los íconos */
+.footer-icon img:hover {
+    transform: scale(1.1); /* Aumentar tamaño al pasar el cursor */
+}
+
+
+
+
