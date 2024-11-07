@@ -5,7 +5,25 @@ html {
     font-family: 'Open Sans', sans-serif;
     background-color: #3f3f3f;
 }
+.mute-button {
+    background: transparent;  /* Fondo transparente */
+    border: none;  /* Sin borde */
+    font-size: 18px;  /* Tamaño más pequeño */
+    cursor: pointer;
+    color: black;  /* Color de texto (negro) */
+    padding: 3px;  /* Paddings pequeños para reducir el tamaño del botón */
+    margin-left: 20px;  /* Separación a la izquierda */
+    border-radius: 50%;  /* Redondear bordes para darle forma circular */
 
+}
+
+.mute-button:hover {
+    color: #ffcc00;  /* Color dorado al pasar el ratón */
+}
+
+.mute-button i {
+    font-size: 20px;  /* Aseguramos que el icono sea más pequeño */
+}
 p{
     font-family: 'Open Sans', sans-serif;
     font-weight: 400; /* Regular */
@@ -27,13 +45,12 @@ header {
     z-index: 1000;
 }
 
-
 /* Estilo general de la barra de navegación */
 .navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 20px;
+    padding: 3px 20px;
 }
 
 /* Estilo de los enlaces de navegación */
@@ -65,22 +82,26 @@ header {
 .search-container {
     display: flex;
     align-items: center;
+    position: relative; /* Permite posicionar el icono de búsqueda */
 }
 
 .search-bar {
     border: 1px solid #000000;
     border-radius: 40px;
-    padding: 8px 15px;
+    padding: 10px 15px;
     width: 400px;
-    height: 25px;
+    height: 20px;
+    padding-right: 40px; /* Espacio adicional para el icono de búsqueda */
 }
 
 .search-button {
     border: none;
     background: none;
-    margin-left: -40px;
+    position: absolute;
+    right: 10px; /* Ajusta esta distancia según el espacio que quieras */
     cursor: pointer;
 }
+
 
 /* Estilo de la lista de enlaces */
 .nav-links {
