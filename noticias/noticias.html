@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noticias en el Mundo</title>
     <link rel="shortcut icon" href="../Imagenes/Logos/Logo-modified.png" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="noticias.css">
+    <script src="../index.js"></script>
+
 </head>
 
 <body>
@@ -32,11 +35,11 @@
                 <li><a href="../categoriasDestacadas/cocheNuevo.html">Comprar</a></li>
                 <li><a href="../venderCoche/venderCoche.html">Vender</a></li>
             </ul>
+            <button id="mute-button" class="mute-button">
+                <i class="fas fa-volume-up"></i>
+            </button>
             <!-- Icons and Account -->
             <div class="account-container">
-                <button class="toggle-button">
-                    <i class="fas fa-toggle-on"></i>
-                </button>
                 <!-- Contenedor de la cuenta y el logo de login -->
                 <div class="account-combined">
                     <!-- Icono del logo -->
@@ -164,6 +167,11 @@
                     src="../Imagenes/RRSS-COPY/tiktok.webp" alt="Tiktok Icon"></a>
         </div>
     </footer>
+    <audio id="background-audio" loop style="display:none;">
+        <source src="Multimedia/Audio/audioFondo.mp3" type="audio/mp3">
+        Tu navegador no soporta la etiqueta de audio.
+    </audio>
+
 </body>
 
 </html>
