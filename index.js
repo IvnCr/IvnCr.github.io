@@ -1,27 +1,40 @@
-// Función para aplicar la animación de salida
-function applyFadeOut(event) {
-    event.preventDefault(); // Previene la redirección instantánea
-    const link = event.currentTarget.href; // Obtiene el enlace del clic
+// Este script controla el audio y su estado de muteo
 
-    // Aplica la clase de fade-out al body
-    document.body.classList.add('fade-out');
+window.addEventListener('load', function () {
+    const muteButton = document.getElementById("mute-button");
+    const audio = document.getElementById("background-audio");
 
-    // Redirige después de la animación
-    setTimeout(function () {
-        window.location.href = link;
-    }, 500); // El retraso coincide con la duración de la transición en el CSS (0.5s)
-}
+    // Al cargar la página, restauramos el estado del audio desde localStorage
+    const isMuted = localStorage.getItem('audioMuted') === 'true';  // Leemos el estado guardado
+    audio.muted = isMuted;
 
-// Agregar el evento a los enlaces
-document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll("a"); // Selecciona todos los enlaces
-    links.forEach(link => {
-        link.addEventListener('click', applyFadeOut);
+    // Si no está silenciado, reproducimos el audio
+    if (!isMuted && audio.paused) {
+        audio.play().catch((error) => {
+            console.log("Error al intentar reproducir el audio:", error);
+        });
+    }
+
+    // Cambiar el ícono del botón dependiendo si está muteado o no
+    muteButton.innerHTML = isMuted ? '<i class="fas fa-volume-mute"></i>' : '<i class="fas fa-volume-up"></i>';
+
+    // Manejo del click para silenciar el audio
+    muteButton.addEventListener("click", function () {
+        audio.muted = !audio.muted;
+        
+        // Guardar el estado del muteo en localStorage
+        localStorage.setItem('audioMuted', audio.muted);
+
+        // Cambiar el ícono del botón
+        muteButton.innerHTML = audio.muted 
+            ? '<i class="fas fa-volume-mute"></i>' 
+            : '<i class="fas fa-volume-up"></i>';
+
+        // Reproducir o pausar el audio según el muteo
+        if (!audio.muted) {
+            audio.play().catch((error) => {
+                console.log("Error al intentar reproducir el audio:", error);
+            });
+        }
     });
 });
-
-// Pantalla de carga
-window.addEventListener("load", function () {
-    document.getElementById("loader").style.display = "none"; // Oculta el loader
-});
-

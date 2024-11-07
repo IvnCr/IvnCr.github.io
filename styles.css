@@ -6,23 +6,22 @@ html {
     background-color: #3f3f3f;
 }
 .mute-button {
-    background: transparent;  /* Fondo transparente */
-    border: none;  /* Sin borde */
-    font-size: 18px;  /* Tamaño más pequeño */
+    background: transparent;  
+    border: none;  
+    font-size: 18px;  
     cursor: pointer;
-    color: black;  /* Color de texto (negro) */
-    padding: 3px;  /* Paddings pequeños para reducir el tamaño del botón */
-    margin-left: 20px;  /* Separación a la izquierda */
-    border-radius: 50%;  /* Redondear bordes para darle forma circular */
-
+    color: black;  
+    padding: 3px; 
+    margin-left: 20px;  
+    border-radius: 50%;  
 }
 
 .mute-button:hover {
-    color: #ffcc00;  /* Color dorado al pasar el ratón */
+    color: #ffcc00;  
 }
 
 .mute-button i {
-    font-size: 20px;  /* Aseguramos que el icono sea más pequeño */
+    font-size: 20px;  
 }
 p{
     font-family: 'Open Sans', sans-serif;
@@ -44,7 +43,6 @@ header {
     top: 0;
     z-index: 1000;
 }
-
 /* Estilo general de la barra de navegación */
 .navbar {
     display: flex;

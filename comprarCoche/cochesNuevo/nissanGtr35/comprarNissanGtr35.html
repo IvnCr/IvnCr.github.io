@@ -7,11 +7,14 @@
     <title>Comprar coche</title>
     <link rel="stylesheet" href="comprarCoche.css">
     <link rel="icon" type="image/x-icon" href="../../../Imagenes/Logos/favicon.ico">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="node_modules/@popperjs/core/dist/umd/popper.js"></script>
+    <script src="../../../index.js"></script>
+
 </head>
 
 <body>
@@ -35,12 +38,14 @@
                 <li><a href="../../../categoriasDestacadas/cocheNuevo.html">Comprar</a></li>
                 <li><a href="../../../venderCoche/venderCoche.html">Vender</a></li>
             </ul>
+            <div class="search-container">
+                <input type="text" placeholder="=  Búsqueda" class="search-bar">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
 
             <!-- Icons and Account -->
             <div class="account-container">
-                <button class="toggle-button">
-                    <i class="fas fa-toggle-on"></i>
-                </button>
+                
                 <!-- Contenedor de la cuenta y el logo de login -->
                 <div class="account-combined">
                     <!-- Icono del logo -->
@@ -160,6 +165,10 @@
                     src="../../../Imagenes/RRSS-COPY/tiktok.webp" alt="Tiktok Icon"></a>
         </div>
     </footer>
+    <audio id="background-audio" loop style="display:none;">
+        <source src="../../../Multimedia/Audio/audioFondo.mp3" type="audio/mp3">
+        Tu navegador no soporta la etiqueta de audio.
+    </audio>
 </body>
 
 </html>

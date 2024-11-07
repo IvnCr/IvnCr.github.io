@@ -25,7 +25,24 @@ header {
     top: 0; /* Ubicar en la parte superior de la ventana */
     z-index: 1000; /* Asegurar que esté por encima de otros elementos */
 }
+.mute-button {
+    background: transparent;  
+    border: none;  
+    font-size: 18px;  
+    cursor: pointer;
+    color: black;  
+    padding: 3px; 
+    margin-left: 20px;  
+    border-radius: 50%;  
+}
 
+.mute-button:hover {
+    color: #ffcc00;  
+}
+
+.mute-button i {
+    font-size: 20px;  
+}
 
 /* Estilo general de la barra de navegación */
 .navbar {
