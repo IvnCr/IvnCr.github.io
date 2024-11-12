@@ -61,6 +61,7 @@ header {
     /* Espaciado horizontal entre enlaces */
     transition: transform 0.3s ease, color 0.3s ease;
     /* Transición suave para el agrandamiento */
+    flex-grow: 1;
 }
 
 /* Efecto hover para los enlaces de navegación */
@@ -192,6 +193,7 @@ header {
     border-top-left-radius: 20px;
     width: 800px;
     height: 400px;
+    flex-grow: 1;
 }
 
 /* Contenedor de la parte derecha */
@@ -201,6 +203,7 @@ header {
     justify-content: center;
     align-items: center;
     padding-left: 20px;
+    flex-grow: 1;
 }
 
 /* Sección principal de Comprar y Vender */
@@ -217,6 +220,7 @@ header {
     height: 250px;
     border: 2px solid #000000;
     /* Añadir borde al contenedor principal */
+    flex-grow: 1;
 }
 
 .buy-sell-section :hover {
@@ -241,6 +245,7 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-grow: 1;
 }
 
 /* Estilos específicos de cada sección */
@@ -304,6 +309,7 @@ button:hover {
     margin-top: 20px;
     padding: 0;
     align-items: center;
+    flex-grow: 1;
 }
 .video-video video{
     border-top-right-radius: 200px;
@@ -404,6 +410,7 @@ button:hover {
     /* Alineado al borde inferior */
     width: 30%;
     /* Ancho del cuadro contenedor */
+    display: flex;
 }
 
 /* Imagen que se alinea y ajusta a las esquinas del cuadro */
@@ -428,6 +435,7 @@ button:hover {
     /* Ajustar bordes redondeados si es necesario */
     border-bottom-left-radius: 150px;
     border-bottom-right-radius: 20px;
+    display: flex;
 }
 
 
@@ -476,6 +484,7 @@ button:hover {
     /* Alineado al borde inferior */
     width: 30%;
     /* Ancho del cuadro contenedor */
+    flex-grow: 1;
 
 }
 
@@ -498,6 +507,7 @@ button:hover {
     border-top-left-radius: 20px;
     /* Asegurarse de que no haya bordes redondeados */
     border-bottom-left-radius: 20px;
+    flex-grow: 1;
 
 }
 
@@ -663,4 +673,117 @@ button:hover {
 .footer-icon img:hover {
     transform: scale(1.1);
     /* Aumentar tamaño al pasar el cursor */
+}
+/* Ajustes para tablets y pantallas medianas */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 3px 10px;
+    }
+
+    .search-bar {
+        width: 300px;
+    }
+
+    .hero, .video, .categories, .brands, .about {
+        margin: 0 2%;
+    }
+
+    .hero-images img, .video-video video {
+        width: 100%;
+        height: auto;
+    }
+
+    .buy-sell-section {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+
+    .category-list {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .brand-list {
+        flex-direction: column;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .about {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .footer {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 10px;
+        text-align: center;
+    }
+}
+
+/* Ajustes para móviles y pantallas pequeñas */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .hero, .video {
+        height: auto;
+    }
+
+    .hero-content {
+        padding-left: 0;
+    }
+
+    .buy-sell-section, .category-container, .brand-container {
+        flex-direction: column;
+    }
+
+    .category {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .brand-list {
+        width: 100%;
+    }
+
+    .footer-right {
+        gap: 10px;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas (teléfonos antiguos o en modo vertical) */
+@media (max-width: 480px) {
+    .navbar a {
+        font-size: 14px;
+        margin: 0 5px;
+    }
+
+    .mute-button {
+        font-size: 16px;
+        margin-left: 5px;
+    }
+
+    .hero, .video, .categories, .brands, .about {
+        margin: 0 1%;
+    }
+
+    .footer {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .footer-icon img {
+        width: 20px;
+        height: 20px;
+    }
 }
