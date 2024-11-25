@@ -208,7 +208,8 @@ header {
     border-bottom-right-radius: 200px;
     border-top-left-radius: 20px;
     opacity: 0;
-    transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out, transform 0.5s ease-in-out; /* Añadido transform para animación */
+
 }
 
 .hero-images img.active {
@@ -224,6 +225,7 @@ header {
     padding-left: px;
     padding-right:25px;
     flex-grow: 1;
+    
 }
 
 /* Sección principal de Comprar y Vender */
@@ -243,10 +245,18 @@ header {
     flex-grow: 1;
 }
 
-.buy-sell-section :hover {
+.buy-sell-section img:hover {
     transform: scale(1.05);
+    animation: bounce 2s ease; /* Animación de rebote */
     transition: transform 0.5s ease, color 0.5s ease;
 }
+
+@keyframes bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
 
 /* Cuadro individual para cada sección */
 .box {
@@ -402,12 +412,11 @@ button:hover {
 
 /* Efecto hover en imágenes de categorías */
 .category img:hover {
-    transform: scale(1.05);
-    /* Aumentar tamaño a 105% */
-    transition: transform 0.8s ease, color 0.5s ease;
-    box-shadow: 5px 2.5px 10px 5px #5c4671;
-    /* Sombra morada alrededor de la imagen */
+    transform: scale(1.05); /* Aumento de tamaño más pronunciado */
+    transition: transform 0.8s ease-in-out, box-shadow 0.5s ease-in-out;
+    box-shadow: 5px 5px 15px rgba(92, 70, 113, 0.7); /* Efecto de sombra con suavidad */
 }
+
 
 /* Estilo del texto en categorías */
 .category p {
@@ -581,11 +590,9 @@ button:hover {
 
 /* Efecto hover para cada logo */
 .brand img:hover {
-    transform: scale(1.05);
-    /* Efecto hover aumentando tamaño */
-    transition: transform 0.8s ease, color 0.5s ease;
-    box-shadow: 5px 2.5px 10px 5px #5c4671;
-    /* Sombra morada alrededor de la imagen */
+    transform: scale(1.05); /* Aumento de tamaño más pronunciado */
+    transition: transform 0.8s ease-in-out, box-shadow 0.5s ease-in-out;
+    box-shadow: 5px 5px 15px rgba(92, 70, 113, 0.7); /* Efecto de sombra con suavidad */
 
 }
 
@@ -699,8 +706,7 @@ button:hover {
 
 /* Efecto hover para los íconos */
 .footer-icon img:hover {
-    transform: scale(1.1);
-    /* Aumentar tamaño al pasar el cursor */
+    transform: scale(1.2);
 }
 /* Ajustes para tablets y pantallas medianas */
 @media (max-width: 1024px) {
