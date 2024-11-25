@@ -1,17 +1,20 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
-    font-family:'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background-color: #3f3f3f;
 }
+
 html {
     scroll-behavior: smooth;
 }
 
-h2{
-    font-family:'Courier New', Courier, monospace;
+h2 {
+    font-family: 'Courier New', Courier, monospace;
 }
-main{
+
+main {
     margin: 5%;
     border-radius: 20px;
     background-color: #ffffff;
@@ -21,27 +24,31 @@ header {
     width: 100%;
     background-color: #e5e5e5;
     border-bottom: 1px solid #ffffff;
-    position: fixed; /* Mantener fija en la parte superior */
-    top: 0; /* Ubicar en la parte superior de la ventana */
-    z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+    position: fixed;
+    /* Mantener fija en la parte superior */
+    top: 0;
+    /* Ubicar en la parte superior de la ventana */
+    z-index: 1000;
+    /* Asegurar que esté por encima de otros elementos */
 }
+
 .mute-button {
-    background: transparent;  
-    border: none;  
-    font-size: 18px;  
+    background: transparent;
+    border: none;
+    font-size: 18px;
     cursor: pointer;
-    color: black;  
-    padding: 3px; 
-    margin-left: 20px;  
-    border-radius: 50%;  
+    color: black;
+    padding: 3px;
+    margin-left: 20px;
+    border-radius: 50%;
 }
 
 .mute-button:hover {
-    color: #ffcc00;  
+    color: #ffcc00;
 }
 
 .mute-button i {
-    font-size: 20px;  
+    font-size: 20px;
 }
 
 /* Estilo general de la barra de navegación */
@@ -55,16 +62,21 @@ header {
 /* Estilo de los enlaces de navegación */
 .navbar a {
     font-size: 16px;
-    color: #000; /* Color del texto */
+    color: #000;
+    /* Color del texto */
     text-decoration: none;
-    margin: 0 15px; /* Espaciado horizontal entre enlaces */
-    transition: transform 0.3s ease, color 0.3s ease; /* Transición suave para el agrandamiento */
+    margin: 0 15px;
+    /* Espaciado horizontal entre enlaces */
+    transition: transform 0.3s ease, color 0.3s ease;
+    /* Transición suave para el agrandamiento */
 }
 
 /* Efecto hover para los enlaces de navegación */
 .navbar a:hover {
-    transform: scale(1.2); /* Aumentar tamaño a 120% */
-    color: #4b0082; /* Cambiar el color del texto al pasar el cursor */
+    transform: scale(1.2);
+    /* Aumentar tamaño a 120% */
+    color: #4b0082;
+    /* Cambiar el color del texto al pasar el cursor */
 }
 
 /* Estilo del logo */
@@ -121,7 +133,7 @@ header {
     gap: 20px;
 }
 
-.toggle-button{
+.toggle-button {
     border: none;
     background-color: rgb(0, 0, 0);
     cursor: pointer;
@@ -129,25 +141,36 @@ header {
 
 /* Estilo para el contenedor que agrupa el login y el botón de cuenta */
 .account-combined {
-    display: flex; /* Flexbox para alinear los elementos */
-    align-items: center; /* Alinear verticalmente en el centro */
-    gap: 10px; /* Espacio entre el icono de login y el botón */
+    display: flex;
+    /* Flexbox para alinear los elementos */
+    align-items: center;
+    /* Alinear verticalmente en el centro */
+    gap: 10px;
+    /* Espacio entre el icono de login y el botón */
     border-radius: 20px;
 }
 
 /* Botón de cuenta */
 .account-button {
     margin-right: 10px;
-    padding: 5px 15px; /* Ajuste de padding */
-    display: flex; /* Flexbox para el contenido */
-    align-items: center; /* Alinear verticalmente en el centro */
-    border-radius: 10px; /* Bordes redondeados */
-    background-color: #cecece; /* Color de fondo */
-    color: rgb(0, 0, 0); /* Color de texto */
+    padding: 5px 15px;
+    /* Ajuste de padding */
+    display: flex;
+    /* Flexbox para el contenido */
+    align-items: center;
+    /* Alinear verticalmente en el centro */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    background-color: #cecece;
+    /* Color de fondo */
+    color: rgb(0, 0, 0);
+    /* Color de texto */
 }
-.account-button:hover{
-    background-color:#ffffff;
+
+.account-button:hover {
+    background-color: #ffffff;
 }
+
 /* Estilo del icono de login */
 .login img {
     margin-left: 10px;
@@ -156,158 +179,206 @@ header {
     margin-right: 0%;
 }
 
+.main-content {
+    background-color: #ffffff;
+    margin: 5%;
+    border-radius: 20px;
+    padding: 2rem;
+}
+
 .container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    padding: 20px;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
-.form-busqueda {
-    background-color: #e5e5e5; /* Fondo gris claro */
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); 
-    width: 25%; /* Ajustamos el ancho del formulario */
-    max-width: 350px; /* Máximo ancho */
-    margin: 0 auto; /* Centrado */
+.search-form {
+    flex: 1;
+    min-width: 300px;
+    background-color: #f5f5f5;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.form-busqueda h2 {
-    font-size: 1.8em;
-    color: #333;
-    margin-bottom: 20px;
+.search-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
     text-align: center;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
     font-weight: bold;
+    color: #555;
 }
 
-.form-busqueda input,
-.form-busqueda select {
-    width: 90%; /* Mantener 100% del ancho del contenedor */
-    padding: 10px; 
-    margin: 10px 0; 
-    border-radius: 8px;
-    border: 1px solid #bbb;
-    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); 
-    transition: border-color 0.3s ease;
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
 }
 
-.form-busqueda input:focus,
-.form-busqueda select:focus {
-    border-color: #6c0086; 
+.form-group input:focus,
+.form-group select:focus {
     outline: none;
+    border-color: #6c0086;
+    box-shadow: 0 0 0 2px rgba(108, 0, 134, 0.1);
 }
 
-.form-busqueda button {
-    width: 100%; 
-    padding: 12px; 
-    margin: 20px 0;
-    border-radius: 8px;
-    border: none;
-    background-color: #6c0086; 
+.search-form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #6c0086;
     color: white;
-    font-size: 1em;
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.form-busqueda button:hover {
-    background-color: #58006b;
+.search-form button:hover {
+    background-color: #4b0082;
+}
+
+.car-title {
+    display: flex; /* Alinear el título y el icono en fila */
+    align-items: center; /* Centrar verticalmente */
+    gap: 8px; /* Separación entre el texto y el icono */
+}
+
+.tuned-icon {
+    margin-left: auto;
+    width: 50px; /* Ajusta el tamaño del icono */
+    height: auto;
+    object-fit: contain;
+}
+.car-list {
+    flex: 2;
+    min-width: 300px;
+}
+
+.car-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+.car-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.car-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.car-card a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.car-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.car-info {
+    padding: 1rem;
+}
+
+.car-info h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    color: #6c0086;
+}
+
+.car-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.tuned-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.car-price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #d40000;
+    margin-bottom: 0.25rem;
+}
+
+.car-warranty {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
 }
 
 @media (max-width: 768px) {
-    .form-busqueda {
-        width: 80%; /* Ajuste de ancho para pantallas más pequeñas */
+    .container {
+        flex-direction: column;
+    }
+
+    .search-form,
+    .car-list {
+        width: 100%;
+    }
+
+    .car-grid {
+        grid-template-columns: 1fr;
     }
 }
 
 
-.lista-coches {
-    margin-top: 5%;
-    width: 65%;
-}
-
-/* Quitar el subrayado del enlace y heredar los colores */
-a {
-    text-decoration: none; /* Eliminar subrayado */
-    color: inherit; /* Asegurar que herede el color del texto */
-}
-
-/* Efecto hover sobre la tarjeta coche */
-a:hover .coche {
-    transform: scale(1.02); /* Agranda ligeramente la tarjeta */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-}
-
-.coche {
-    display: flex;
-    align-items: center;
-    background-color: white;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    border: 1px solid #ccc;
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-}
-
-.coche img {
-    max-width: 250px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-right: 20px;
-}
-.tuneo-icono {
-    width: 50px; /* Ajusta el tamaño que necesites */
-    height: auto;
-    margin-left: 10px; /* Ajusta el margen según sea necesario */
-    object-fit: contain; /* Para que no se deforme la imagen del ícono */
-    border-radius: 0; /* Sin borde redondeado */
-}
-
-.info-coche {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.info-coche h3 {
-    margin: 0;
-    color: #6c0086;
-}
-
-.info-detalles {
-    display: flex;
-    justify-content: space-between;
-    margin: 5px 0;
-}
-
-.info-coche p {
-    margin: 5px 0;
-}
-
-.precio {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: #d40000;
-}
-
-.garantia {
-    color: #888;
-    font-size: 0.9em;
-}
 
 
 
 /* Estilo general del footer */
 .footer {
     display: flex;
-    justify-content: space-between; /* Distribuir elementos de izquierda a derecha */
+    justify-content: space-between;
+    /* Distribuir elementos de izquierda a derecha */
     align-items: center;
-    background-color: #e5e5e5; /* Fondo claro */
-    padding: 10px 20px; /* Espaciado vertical reducido a 10px */
-    border-top: 2px solid #000; /* Línea superior */
+    background-color: #e5e5e5;
+    /* Fondo claro */
+    padding: 10px 20px;
+    /* Espaciado vertical reducido a 10px */
+    border-top: 2px solid #000;
+    /* Línea superior */
     height: 45px;
 }
 
@@ -319,26 +390,30 @@ a:hover .coche {
 
 /* Estilo del logo */
 .footer-logo {
-    width: 70px; /* Ajustar tamaño del logo */
+    width: 70px;
+    /* Ajustar tamaño del logo */
     height: auto;
 }
 
 /* Estilo del contenedor central */
 .footer-center {
     text-align: center;
-    font-size: 14px; /* Tamaño de letra */
+    font-size: 14px;
+    /* Tamaño de letra */
     color: #000;
 }
 
 /* Contenedor de íconos de redes sociales */
 .footer-right {
     display: flex;
-    gap: 20px; /* Separación entre íconos */
+    gap: 20px;
+    /* Separación entre íconos */
 }
 
 /* Estilo de los íconos */
 .footer-icon img {
-    width: 25px; /* Tamaño de cada ícono */
+    width: 25px;
+    /* Tamaño de cada ícono */
     height: 25px;
     cursor: pointer;
     transition: transform 0.3s ease;
@@ -346,6 +421,6 @@ a:hover .coche {
 
 /* Efecto hover para los íconos */
 .footer-icon img:hover {
-    transform: scale(1.1); /* Aumentar tamaño al pasar el cursor */
+    transform: scale(1.1);
+    /* Aumentar tamaño al pasar el cursor */
 }
-

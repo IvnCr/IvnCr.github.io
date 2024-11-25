@@ -59,95 +59,102 @@
         </nav>
     </header>
 
-    <main>
+    <main class="main-content">
         <div class="container">
-            <!-- Formulario de búsqueda -->
-            <div class="form-busqueda">
+            <section class="search-form">
                 <h2>Buscar Coches Nuevos</h2>
-                <form action="#">
-                    <label for="marca">Marca</label>
-                    <input type="text" id="marca" placeholder="Marca y modelo">
-
-                    <label for="potencia">Pot.</label>
-                    <input type="text" id="potencia" placeholder="Potencia (cv)">
-
-                    <label for="tuneado">Tuneado</label>
-                    <select id="tuneado">
-                        <option value="si">Sí</option>
-                        <option value="no">No</option>
-                    </select>
-
-                    <label for="año">Año</label>
-                    <input type="number" id="año" placeholder="Año">
-
-                    <label for="color">Color</label>
-                    <input type="text" id="color" placeholder="Color">
-
+                <form action="#" method="get">
+                    <div class="form-group">
+                        <label for="marca">Marca</label>
+                        <input type="text" id="marca" name="marca" placeholder="Marca y modelo">
+                    </div>
+                    <div class="form-group">
+                        <label for="potencia">Potencia</label>
+                        <input type="number" id="potencia" name="potencia" placeholder="Potencia (cv)">
+                    </div>
+                    <div class="form-group">
+                        <label for="tuneado">Tuneado</label>
+                        <select id="tuneado" name="tuneado">
+                            <option value="si">Sí</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="año">Año</label>
+                        <input type="number" id="año" name="año" placeholder="Año">
+                    </div>
+                    <div class="form-group">
+                        <label for="color">Color</label>
+                        <input type="text" id="color" name="color" placeholder="Color">
+                    </div>
                     <button type="submit">Buscar</button>
                 </form>
-            </div>
+            </section>
 
-            <!-- Lista de coches -->
-            <div class="lista-coches">
-                <a href="../detallesCoche/cochesNuevo/detallesToyotaAuris.html" class="enlace-coche">
-                    <div class="coche">
-                        <img src="../Imagenes/fotosMarcasCoches/Toyota/Toyota_Auris.jpg" alt="Toyota Auris">
-                        <div class="info-coche">
-                            <h3>Toyota Auris</h3>
-                            <div class="info-detalles">
-                                <span>Potencia: 110cv</span>
-                                <img src="">
+            <section class="car-list">
+                <h2 class="sr-only">Lista de Coches Disponibles</h2>
+                <div class="car-grid">
+                    <article class="car-card">
+                        <a href="../detallesCoche/cochesNuevo/detallesToyotaAuris.html">
+                            <img src="../Imagenes/fotosMarcasCoches/Toyota/Toyota_Auris.jpg" alt="Toyota Auris" class="car-image">
+                            <div class="car-info">
+                                <h3>Toyota Auris</h3>
+                                <div class="car-details">
+                                    <span>Potencia: 110cv</span>
+                                </div>
+                                <p class="car-price">17.000€</p>
+                                <p class="car-warranty">Garantía 6 años - IVA incluido</p>
                             </div>
-                            <p class="precio">17.000€</p>
-                            <p class="garantia">Garantía 6 años - IVA incluido</p>
-                        </div>
-                    </div>
-                </a>
+                        </a>
+                    </article>
 
-                <a href="../detallesCoche/cochesNuevo/detallesLexusUx.html" class="enlace-coche">
-                    <div class="coche">
-                        <img src="../Imagenes/fotosMarcasCoches/Lexus/Lexus UX.jpg" alt="Lexus UX">
-                        <div class="info-coche">
-                            <h3>Lexus UX</h3>
-                            <div class="info-detalles">
-                                <span>Potencia: 220cv</span>
-                                <img src="">
+                    <article class="car-card">
+                        <a href="../detallesCoche/cochesNuevo/detallesLexusUx.html">
+                            <img src="../Imagenes/fotosMarcasCoches/Lexus/Lexus UX.jpg" alt="Lexus UX" class="car-image">
+                            <div class="car-info">
+                                <h3>Lexus UX</h3>
+                                <div class="car-details">
+                                    <span>Potencia: 220cv</span>
+                                </div>
+                                <p class="car-price">33.000€</p>
+                                <p class="car-warranty">Garantía 5 años - IVA incluido</p>
                             </div>
-                            <p class="precio">33.000€</p>
-                            <p class="garantia">Garantía 5 años - IVA incluido</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="../detallesCoche/cochesNuevo/detallesNissanGtr35.html" class="enlace-coche">
-                    <div class="coche">
-                        <img src="../Imagenes/fotosMarcasCoches/Nissan/Nissan-GTR35-Nismo(1).webp"
-                            alt="Nissan GTR R35 Nismo">
-                        <div class="info-coche">
-                            <h3>Nissan GTR R35 Nismo</h3>
-                            <div class="info-detalles">
-                                <span>Potencia: 700cv</span>
-                                <img title="Tuneado" src="../Imagenes/Logos/cocheTuneado.png">
-                            </div>
-                            <p class="precio">280.000€</p>
-                            <p class="garantia">Garantía 5 años - IVA incluido</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="../comprarCoche/cochesNuevo/comprarSubaruBrz.html" class="enlace-coche">
-                    <div class="coche">
-                        <img src="../Imagenes/fotosMarcasCoches/Subaru/Subaru-BRZ.jpg" alt="Subaru BRZ">
-                        <div class="info-coche">
-                            <h3>Subaru BRZ</h3>
-                            <div class="info-detalles">
-                                <span>Potencia: 260cv</span>
-                            </div>
-                            <p class="precio">55.000€</p>
-                            <p class="garantia">Garantía 3 años - IVA incluido</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+                        </a>
+                    </article>
 
+                    <article class="car-card">
+                        <a href="../detallesCoche/cochesNuevo/detallesNissanGtr35.html">
+                            <img src="../Imagenes/fotosMarcasCoches/Nissan/Nissan-GTR35-Nismo(1).webp" alt="Nissan GTR R35 Nismo" class="car-image">
+                            <div class="car-info">
+                                <div class="car-title">
+                                    <h3>Nissan GTR R35 Nismo</h3>
+                                    <img src="../Imagenes/Logos/cocheTuneado.png" class="tuned-icon" title="Tuneado">
+                                </div>
+                                <div class="car-details">
+                                    <span>Potencia: 700cv</span>
+                                </div>
+                                <p class="car-price">280.000€</p>
+                                <p class="car-warranty">Garantía 5 años - IVA incluido</p>
+                            </div>
+                        </a>
+                    </article>
+                    
+
+                    <article class="car-card">
+                        <a href="../comprarCoche/cochesNuevo/comprarSubaruBrz.html">
+                            <img src="../Imagenes/fotosMarcasCoches/Subaru/Subaru-BRZ.jpg" alt="Subaru BRZ" class="car-image">
+                            <div class="car-info">
+                                <h3>Subaru BRZ</h3>
+                                <div class="car-details">
+                                    <span>Potencia: 260cv</span>
+                                </div>
+                                <p class="car-price">55.000€</p>
+                                <p class="car-warranty">Garantía 3 años - IVA incluido</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </section>
         </div>
     </main>
 

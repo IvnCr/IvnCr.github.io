@@ -58,110 +58,127 @@
         </nav>
     </header>
 
-    <main>
+    <main class="main-content">
         <div class="container">
-            <!-- Formulario de búsqueda -->
-            <div class="form-busqueda">
+            <section class="search-form">
                 <h2>Buscar Coches Tuneados</h2>
-                <form action="#">
-                    <label for="marca">Marca</label>
-                    <input type="text" id="marca" placeholder="Marca y modelo">
-
-                    <label for="potencia">Pot.</label>
-                    <input type="text" id="potencia" placeholder="Potencia (cv)">
-
-                    <label for="tuneado">Tuneado</label>
-                    <select id="tuneado">
-                        <option value="si">Sí</option>
-                        <option value="no">No</option>
-                    </select>
-
-                    <label for="año">Año</label>
-                    <input type="number" id="año" placeholder="Año">
-
-                    <label for="color">Color</label>
-                    <input type="text" id="color" placeholder="Color">
-
+                <form action="#" method="get">
+                    <div class="form-group">
+                        <label for="marca">Marca</label>
+                        <input type="text" id="marca" name="marca" placeholder="Marca y modelo">
+                    </div>
+                    <div class="form-group">
+                        <label for="potencia">Potencia</label>
+                        <input type="number" id="potencia" name="potencia" placeholder="Potencia (cv)">
+                    </div>
+                    <div class="form-group">
+                        <label for="tuneado">Tuneado</label>
+                        <select id="tuneado" name="tuneado">
+                            <option value="si">Sí</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="año">Año</label>
+                        <input type="number" id="año" name="año" placeholder="Año">
+                    </div>
+                    <div class="form-group">
+                        <label for="color">Color</label>
+                        <input type="text" id="color" name="color" placeholder="Color">
+                    </div>
                     <button type="submit">Buscar</button>
                 </form>
-            </div>
+            </section>
 
-            <!-- Lista de coches -->
-            <div class="lista-coches">
-                <a href="../detallesCoche/cochesTuneados/detallesMitsubishiLancerEvoIx.html" class="enlace-coche">
-                    <div class="coche">
-                        <img src="../Imagenes/fotosMarcasCoches/Mitsubishi/EvoIX_Tuning.jpg"
-                            alt="Mitsubishi Lancer Evo IX">
-                        <div class="info-coche">
-                            <h3>Mitsubishi Lancer Evo IX</h3>
-                            <div class="info-detalles">
-                                <span>Potencia: 320cv</span>
-                                <img title="Tuneado" src="../Imagenes/Logos/cocheTuneado.png">
+            <section class="car-list">
+                <h2 class="sr-only">Lista de Coches Disponibles</h2>
+                <div class="car-grid">
+                    <article class="car-card">
+                        <a href="../detallesCoche/cochesTuneados/detallesMitsubishiLancerEvoIx.html">
+                            <img src="../Imagenes/fotosMarcasCoches/Mitsubishi/EvoIX_Tuning (1).jpg" alt="Mitsubishi Evo IX" class="car-image">
+                            <div class="car-info">
+                                <div class="car-title">
+                                    <h3>Mitsubishi Evo IX </h3>
+                                    <img src="../Imagenes/Logos/cocheTuneado.png" class="tuned-icon" title="Tuneado">
+                                </div>
+                                <div class="car-details">
+                                    <span>Potencia: 700cv</span>
+                                </div>
+                                <p class="car-price">280.000€</p>
+                                <p class="car-warranty">Garantía 5 años - IVA incluido</p>
                             </div>
-                            <p class="precio">30.000€</p>
-                            <p class="garantia">Garantía 2 años - IVA incluido</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="../detallesCoche/cochesTuneados/detallesLexusIS200.html" class="enlace-coche">
-                    <div class="coche">
-                        <img src="../Imagenes/fotosMarcasCoches/Lexus/IS200.png" alt="Lexus IS200">
-                        <div class="info-coche">
-                            <h3>Lexus IS200</h3>
-                            <div class="info-detalles">
-                                <span>Potencia: 240cv</span>
-                                <img class="tuneo-icono" title="Tuneado" src="../Imagenes/Logos/cocheTuneado.png">
-                            </div>
-                            <p class="precio">23.500€</p>
-                            <p class="garantia">Garantía 2 años - IVA incluido</p>
-                        </div>
-                    </div>
-                </a>
+                        </a>
+                    </article>
 
-                <a href="compraCoche2.html" class="enlace-coche">
-                    <div class="coche">
-                        <img src="../Imagenes/fotosMarcasCoches/Mitsubishi/EvoIX_Wagon_Tuning.jpg" alt="Toyota Supra">
-                        <div class="info-coche">
-                            <h3>Mitsubishi Lancer Evo IX Wagon</h3>
-                            <div class="info-detalles">
-                                <span>Potencia: 250cv</span>
-                                <img class="tuneo-icono" title="Tuneado" src="../Imagenes/Logos/cocheTuneado.png">
+                    <article class="car-card">
+                        <a href="../detallesCoche/cochesTuneados/detallesLexusIS200.html">
+                            <img src="../Imagenes/fotosMarcasCoches/Lexus/IS200.png" alt="Lexus IS200" class="car-image">
+                            <div class="car-info">
+                                <div class="car-title">
+                                    <h3>Lexus IS200</h3>
+                                    <img src="../Imagenes/Logos/cocheTuneado.png" class="tuned-icon" title="Tuneado">
+                                </div>
+                                <div class="car-details">
+                                    <span>Potencia: 240cv</span>
+                                </div>
+                                <p class="car-price">23.500€</p>
+                                <p class="car-warranty">Garantía 2 años - IVA incluido</p>
                             </div>
-                            <p class="precio">35.000€</p>
-                            <p class="garantia">Garantía 3 años - IVA incluido</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="compraCoche2.html" class="enlace-coche">
-                    <div class="coche">
-                        <img src="../Imagenes/fotosMarcasCoches/Mazda/mazdatuning1.jpg" alt="Mazda Rx7">
-                        <div class="info-coche">
-                            <h3>Mazda Rx7</h3>
-                            <div class="info-detalles">
-                                <span>Potencia: 340cv</span>
-                                <img class="tuneo-icono" title="Tuneado" src="../Imagenes/Logos/cocheTuneado.png">
-                            </div>
-                            <p class="precio">42.000€</p>
-                            <p class="garantia">Garantía 3 años - IVA incluido</p>
-                        </div>
-                    </div>
-                </a>
-                <a href="compraCoche2.html" class="enlace-coche">
-                    <div class="coche">
-                        <img src="../Imagenes/fotosMarcasCoches/Toyota/VeilSideFortune-SupraMK4.jpg" alt="Toyota Supra">
-                        <div class="info-coche">
-                            <h3>VeilSide-Fortune Toyota Supra MK4</h3>
-                            <div class="info-detalles">
-                                <span>Potencia: 450cv</span>
-                                <img class="tuneo-icono" title="Tuneado" src="../Imagenes/Logos/cocheTuneado.png">
-                            </div>
-                            <p class="precio">55.000€</p>
-                            <p class="garantia">Garantía 2 años - IVA incluido</p>
-                        </div>
-                    </div>
-                </a>
-            </div>
+                        </a>
+                    </article>
 
+                    <article class="car-card">
+                        <a href="../detallesCoche/cochesTuneados/detallesMitsubishiLancerEvoIxWagonTuning.html">
+                            <img src="../Imagenes/fotosMarcasCoches/Mitsubishi/EvoIX_Wagon_Tuning.jpg" alt="Nissan GTR R35 Nismo" class="car-image">
+                            <div class="car-info">
+                                <div class="car-title">
+                                    <h3>Mitsubishi Evo IX Wagon</h3>
+                                    <img src="../Imagenes/Logos/cocheTuneado.png" class="tuned-icon" title="Tuneado">
+                                </div>
+                                <div class="car-details">
+                                    <span>Potencia: 700cv</span>
+                                </div>
+                                <p class="car-price">280.000€</p>
+                                <p class="car-warranty">Garantía 5 años - IVA incluido</p>
+                            </div>
+                        </a>
+                    </article>
+                    
+
+                    <article class="car-card">
+                        <a href="../detallesCoche/cochesTuneados/detallesMazdaRx7.html">
+                            <img src="../Imagenes/fotosMarcasCoches/Mazda/mazdatuning1.jpg" alt="Nissan GTR R35 Nismo" class="car-image">
+                            <div class="car-info">
+                                <div class="car-title">
+                                    <h3>Mazda RX7</h3>
+                                    <img src="../Imagenes/Logos/cocheTuneado.png" class="tuned-icon" title="Tuneado">
+                                </div>
+                                <div class="car-details">
+                                    <span>Potencia: 340cv</span>
+                                </div>
+                                <p class="car-price">42.000€</p>
+                                <p class="car-warranty">Garantía 2 años - IVA incluido</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article class="car-card">
+                        <a href="../detallesCoche/cochesTuneados/detallesToyotaSupraVeilside.html">
+                            <img src="../Imagenes/fotosMarcasCoches/Toyota/VeilSide-Fortune-para-Supra-MK4-1-e1720801908598.jpg" alt="Nissan GTR R35 Nismo" class="car-image">
+                            <div class="car-info">
+                                <div class="car-title">
+                                    <h3>Toyota Supra VeilSide Fortune</h3>
+                                    <img src="../Imagenes/Logos/cocheTuneado.png" class="tuned-icon" title="Tuneado">
+                                </div>
+                                <div class="car-details">
+                                    <span>Potencia: 450cv</span>
+                                </div>
+                                <p class="car-price">55.000€</p>
+                                <p class="car-warranty">Garantía 3 años - IVA incluido</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+            </section>
         </div>
     </main>
 
