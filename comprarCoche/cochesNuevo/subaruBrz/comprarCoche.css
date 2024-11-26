@@ -170,7 +170,7 @@ main::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('../Imagenes/fotosMarcasCoches/Mitsubishi/EvoIX_Tuning.jpg');
+    background-image: url('../../../Imagenes/fotosMarcasCoches/Subaru/Subaru-BRZ.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -242,6 +242,7 @@ h3 {
     margin-bottom: 10px;
     font-size: 1em;
     font-weight: bold;
+    color:#8a0196;
 }
 
 .form-group {
@@ -250,7 +251,7 @@ h3 {
 
 label {
     display: block;
-
+    font-weight: bold;
 }
 
 input {
