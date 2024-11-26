@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprar coche</title>
+    <link rel="stylesheet" href="./comprarCoche.css">
+    <link rel="icon" type="image/x-icon" href="../../../Imagenes/Logos/favicon.ico">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="node_modules/@popperjs/core/dist/umd/popper.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <!-- Logo -->
+            <div class="logo">
+                <a href="../../../detallesCoche/cochesTuneados/detallesToyotaSupraVeilside.html"><img src="../../../Imagenes/Logos/JDMDrive.png" alt="JDMDrive Logo"></a>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" placeholder="=  Búsqueda" class="search-bar">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+
+            <!-- Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="../../../index.html">Sobre Nosotros</a></li>
+                <li><a href="../../../noticias/noticias.html">Noticias</a></li>
+                <li><a href="../../../categoriasDestacadas/cocheNuevo.html">Comprar</a></li>
+                <li><a href="../../../venderCoche/venderCoche.html">Vender</a></li>
+            </ul>
+            <button id="mute-button" class="mute-button">
+                <i class="fas fa-volume-up"></i>
+            </button>
+
+            <!-- Icons and Account -->
+            <div class="account-container">
+                <!-- Contenedor de la cuenta y el logo de login -->
+                <div class="account-combined">
+                    <!-- Icono del logo -->
+                    <div class="login">
+                        <img src="../../../Imagenes/login.png" alt="Login">
+                    </div>
+
+                    <!-- Botón de cuenta -->
+                    <a href="../../../inicioSesion-Registrase/iniciarSesion.html" class="account-button">
+                        Mi Cuenta
+                    </a>
+                </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="form-container2">
+            <h2>Detalles del vehículo</h2>
+            <img src="../../../Imagenes/clip.webp" alt="Clip" class="icon icon-top-left">
+            <img src="../../../Imagenes/Llave.png" alt="Key" class="icon icon-top-right2">
+            <form>
+                <div class="form-group">
+                    <label for="marca-modelo">Marca/Modelo:</label>
+                    <span class="underline">Toyota Supra Veilside Fortune</span>
+                </div>
+                <div class="form-group">
+                    <label for="ano">Año:</label>
+                    <span class="underline">1997</span>
+                </div>
+                <div class="form-group">
+                    <label for="precio-total">Precio Total:</label>
+                    <span class="underline">55.000€</span>
+                </div>
+            </form>
+            <img src="../../../Imagenes/illaves.png" alt="Key" class="icon icon-bottom-left">
+        </div>
+        <div class="form-container">
+            <h2>Compra del Vehículo</h2>
+            <img src="../../../Imagenes/clip.webp" alt="Clip" class="icon icon-top-left">
+            <img src="../../../Imagenes/Llave.png" alt="Key" class="icon icon-top-right1">
+            <form>
+                <h3>Información del Comprador:</h3>
+                <div class="form-group">
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <h3>Información de Pago:</h3>
+                <div class="form-group">
+                    <label for="tarjeta">Número de Tarjeta:</label>
+                    <input type="text" id="tarjeta" name="tarjeta" required>
+                </div>
+                <div class="form-group">
+                    <label for="expiracion">Fecha de Expiración (MM/AA):</label>
+                    <input type="text" id="expiracion" name="expiracion" required>
+                </div>
+                <div class="form-group">
+                    <label for="cvv">Código de Seguridad (CVV):</label>
+                    <input type="text" id="cvv" name="cvv" required>
+                </div>
+                <h3>Dirección de facturación:</h3>
+                <div class="form-group">
+                    <label for="calle">Calle:</label>
+                    <input type="text" id="calle" name="calle" required>
+                </div>
+                <div class="form-group">
+                    <label for="ciudad">Ciudad:</label>
+                    <input type="text" id="ciudad" name="ciudad" required>
+                </div>
+                <div class="form-group">
+                    <label for="codigo-postal">Código Postal:</label>
+                    <input type="text" id="codigo-postal" name="codigo-postal" required>
+                </div>
+                <button type="submit" class="submit-btn">Comprar</button>
+            </form>
+            <img src="../../../Imagenes/illaves.png" alt="Key" class="icon icon-bottom-left">
+        </div>
+    </main>
+
+
+    <footer class="footer">
+        <!-- Contenedor izquierdo con el logo -->
+        <div class="footer-left">
+            <img src="../../../Imagenes/Logos/JDMDrive.png" alt="JDMDrive Logo" class="footer-logo">
+        </div>
+
+        <!-- Contenedor central con el texto de derechos reservados -->
+        <div class="footer-center">
+            <p xmlns:cc="http://creativecommons.org/ns#">
+                Este trabajo está licenciado bajo 
+                <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
+                    CC BY-NC-ND 4.0
+                    <img style="height:22px !important; margin-left:3px; vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="CC icon">
+                    <img style="height:22px !important; margin-left:3px; vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="BY icon">
+                    <img style="height:22px !important; margin-left:3px; vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="NC icon">
+                    <img style="height:22px !important; margin-left:3px; vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt="ND icon">
+                </a>
+            </p>
+        </div>
+
+        <!-- Contenedor derecho con los íconos de redes sociales -->
+        <div class="footer-right">
+            <a title="icr0015@alu.medac.es" href="#" class="footer-icon"><img src="../../../Imagenes/RRSS-COPY/gmail.png"
+                    alt="Email Icon"></a>
+            <a href="https://x.com/IvnCr33" class="footer-icon"><img src="../../../Imagenes/RRSS-COPY/x-removebg-preview.png"
+                    alt="Twitter Icon"></a>
+            <a href="https://www.instagram.com/ivn.cr/profilecard/" class="footer-icon"><img
+                    src="../../../Imagenes/RRSS-COPY/Instagram.webp" alt="Instagram Icon"></a>
+            <a href="https://www.tiktok.com/@ivvn.cr?_t=8qGUB5DLv84&_r=1" class="footer-icon"><img
+                    src="../../../Imagenes/RRSS-COPY/tiktok.webp" alt="Tiktok Icon"></a>
+        </div>
+    </footer>
+    <audio id="background-audio" loop style="display:none;">
+        <source src="../../../Multimedia/Audio/audioFondo.mp3" type="audio/mp3">
+        Tu navegador no soporta la etiqueta de audio.
+    </audio>
+</body>
+
+</html>
