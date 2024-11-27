@@ -78,3 +78,15 @@ function changeinvisible2Image() {
 
 setInterval(changeinvisible2Image, 3000); // Cambia cada 3 segundos
 
+//CATEGORY
+let currentInvisible3Index = 0;
+const invisible3Images = document.querySelectorAll('.invisible-box3 .slider-image');
+const totalInvisible3Images = invisible3Images.length;
+
+function changeInvisible3Image() {
+    invisible3Images[currentInvisible3Index].classList.remove('active');
+    currentInvisible3Index = (currentInvisible3Index + 1) % totalInvisible3Images;
+    invisible3Images[currentInvisible3Index].classList.add('active');
+}
+
+setInterval(changeInvisible3Image, 3000); // Cambia cada 3 segundos

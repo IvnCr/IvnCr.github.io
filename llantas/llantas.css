@@ -1,0 +1,346 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #3f3f3f;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+main {
+    margin: 5%;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
+header {
+    width: 100%;
+    background-color: #e5e5e5;
+    border-bottom: 1px solid #ffffff;
+    position: fixed;
+    /* Mantener fija en la parte superior */
+    top: 0;
+    /* Ubicar en la parte superior de la ventana */
+    z-index: 1000;
+    /* Asegurar que esté por encima de otros elementos */
+}
+
+.mute-button {
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: black;
+    padding: 3px;
+    margin-left: 20px;
+    border-radius: 50%;
+}
+
+.mute-button:hover {
+    color: #ffcc00;
+}
+
+.mute-button i {
+    font-size: 20px;
+}
+
+/* Estilo general de la barra de navegación */
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px;
+}
+
+/* Estilo de los enlaces de navegación */
+.navbar a {
+    font-size: 16px;
+    color: #000;
+    /* Color del texto */
+    text-decoration: none;
+    margin: 0 15px;
+    /* Espaciado horizontal entre enlaces */
+    transition: transform 0.3s ease, color 0.3s ease;
+    /* Transición suave para el agrandamiento */
+}
+
+/* Efecto hover para los enlaces de navegación */
+.navbar a:hover {
+    transform: scale(1.2);
+    /* Aumentar tamaño a 120% */
+    color: #4b0082;
+    /* Cambiar el color del texto al pasar el cursor */
+}
+
+/* Estilo del logo */
+.logo img {
+    height: 40px;
+}
+
+/* Estilo del contenedor de búsqueda */
+.search-container {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar {
+    border: 1px solid #000000;
+    border-radius: 40px;
+    padding: 8px 15px;
+    width: 400px;
+    height: 25px;
+}
+
+.search-button {
+    border: none;
+    background: none;
+    margin-left: -40px;
+    cursor: pointer;
+}
+
+/* Estilo de la lista de enlaces */
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 20px;
+}
+
+/* Ajuste de estilo de cada enlace */
+.nav-links li a {
+    text-decoration: none;
+    color: #000000;
+    padding: 5px 10px;
+}
+
+/* Efecto hover para los enlaces de lista */
+.nav-links li a:hover {
+    border-bottom: 2px solid #333;
+}
+
+/* Estilo del contenedor de cuenta */
+.account-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.toggle-button {
+    border: none;
+    background-color: rgb(0, 0, 0);
+    cursor: pointer;
+}
+
+/* Estilo para el contenedor que agrupa el login y el botón de cuenta */
+.account-combined {
+    display: flex;
+    /* Flexbox para alinear los elementos */
+    align-items: center;
+    /* Alinear verticalmente en el centro */
+    gap: 10px;
+    /* Espacio entre el icono de login y el botón */
+    border-radius: 20px;
+}
+
+/* Botón de cuenta */
+.account-button {
+    margin-right: 10px;
+    padding: 5px 15px;
+    /* Ajuste de padding */
+    display: flex;
+    /* Flexbox para el contenido */
+    align-items: center;
+    /* Alinear verticalmente en el centro */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    background-color: #cecece;
+    /* Color de fondo */
+    color: rgb(0, 0, 0);
+    /* Color de texto */
+}
+
+.account-button:hover {
+    background-color: #ffffff;
+}
+
+/* Estilo del icono de login */
+.login img {
+    margin-left: 10px;
+    height: 30px;
+    float: right;
+    margin-right: 0%;
+}
+
+.main-tires {
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+.main-content {
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+.tire-catalog h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #333;
+    margin-top: 5px; /* Esto añade un margen superior */
+    margin-bottom: 2rem;
+    padding: 0; /* Elimina cualquier padding */
+    /* Para forzar el margen superior si es necesario */
+    /* margin-top: 50px !important; */
+}
+
+
+.tire-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tire-card {
+    background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 250px;
+    height: 350px;
+    margin: 0 auto; /* Centrar */
+    position: relative; /* Necesario para que el cartelito se posicione dentro del contenedor */
+}
+
+.tire-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.tire-card img {
+    display: block; /* Convertir la imagen en un elemento de bloque */
+    margin: 0 auto; /* Centrarse horizontalmente */
+    width: 60%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 2px solid #ddd;
+}
+
+.brand-badge {
+    position: absolute;
+    top: 10px;  /* Separación desde el borde superior */
+    left: 10px; /* Separación desde el borde izquierdo */
+    background-color: #d40000; /* Color de fondo del cartelito */
+    color: white; /* Color del texto */
+    padding: 5px 10px;
+    font-size: 0.9rem; /* Tamaño de la fuente */
+    font-weight: bold;
+    border-radius: 5px; /* Bordes redondeados */
+    text-transform: uppercase; /* Convertir el texto a mayúsculas */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra sutil para destacar el cartelito */
+}
+
+.tire-info {
+    padding: 1rem;
+    text-align: center;
+}
+
+.tire-info h2 {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 0.4rem;
+}
+.tire-price {
+    font-size: 1rem;
+    color: #d40000;
+    display: flex;
+    align-items: center; /* Alinea los elementos verticalmente */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 10px; /* Espacio entre el precio original y el precio actual */
+}
+
+.old-price {
+    text-decoration: line-through; /* Tacha el precio original */
+    color: #999; /* Color gris para el precio tachado */
+    font-size: 0.8rem; /* Hacer el precio tachado un poco más pequeño */
+}
+
+.current-price {
+    font-size: 1.4rem; /* El precio actual será un poco más grande */
+    color: #d40000; /* Color rojo para destacar el precio actual */
+    text-align: center; /* Asegura que el precio esté centrado */
+    font-weight: bold;
+
+}
+
+
+
+
+
+
+/* Estilo general del footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    /* Distribuir elementos de izquierda a derecha */
+    align-items: center;
+    background-color: #e5e5e5;
+    /* Fondo claro */
+    padding: 10px 20px;
+    /* Espaciado vertical reducido a 10px */
+    border-top: 2px solid #000;
+    /* Línea superior */
+    height: 45px;
+}
+
+/* Estilo del contenedor izquierdo con el logo */
+.footer-left {
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo del logo */
+.footer-logo {
+    width: 70px;
+    /* Ajustar tamaño del logo */
+    height: auto;
+}
+
+/* Estilo del contenedor central */
+.footer-center {
+    text-align: center;
+    font-size: 14px;
+    /* Tamaño de letra */
+    color: #000;
+}
+
+/* Contenedor de íconos de redes sociales */
+.footer-right {
+    display: flex;
+    gap: 20px;
+    /* Separación entre íconos */
+}
+
+/* Estilo de los íconos */
+.footer-icon img {
+    width: 25px;
+    /* Tamaño de cada ícono */
+    height: 25px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+/* Efecto hover para los íconos */
+.footer-icon img:hover {
+    transform: scale(1.1);
+    /* Aumentar tamaño al pasar el cursor */
+}

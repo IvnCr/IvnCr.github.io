@@ -596,6 +596,106 @@ button:hover {
 
 }
 
+.wheels {
+    margin: 2% 5%;
+    background: linear-gradient(to right, #fffff4, #fbe2ff);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.wheels h2 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: left;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.wheels-container {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+}
+
+.wheels-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 10px;
+}
+
+.wheel {
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    background-color: #ffffff;
+}
+
+.wheel img {
+    width: 90%;
+    height: auto;
+    border-bottom: 3px solid #f0f0f0;
+    transition: transform 0.4s ease;
+}
+
+.wheel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.wheel img:hover {
+    transform: scale(1.1);
+}
+
+/* Cuadro contenedor de la imagen a la derecha */
+.invisible-box3 {
+    position: absolute;
+    /* Posición absoluta dentro del contenedor padre */
+    right: 0;
+    /* Alineado al borde derecho */
+    top: 0;
+    /* Alineado al borde superior */
+    bottom: 0;
+    /* Alineado al borde inferior */
+    width: 30%;
+    /* Ancho del cuadro contenedor */
+    display: flex;
+}
+
+/* Imagen que se alinea y ajusta a las esquinas del cuadro */
+.invisible-box3 img {
+    position: absolute;
+    /* Imagen posicionada dentro del contenedor */
+    top: 0;
+    /* Alineada a la parte superior */
+    right: 0;
+    /* Alineada a la derecha */
+    bottom: 0;
+    /* Alineada a la parte inferior */
+    left: auto;
+    /* Alineada a la izquierda para que cubra todo el cuadro */
+    width: 85%;
+    /* Ancho de la imagen que se ajuste al contenedor */
+    height: 100%;
+    /* Altura de la imagen que se ajuste al contenedor */
+    object-fit: cover;
+    /* Mantener proporción y cubrir todo el contenedor */
+    border-top-left-radius: 200px;
+    /* Ajustar bordes redondeados si es necesario */
+    border-bottom-left-radius: 200px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    opacity: 0; /* Oculta imágenes por defecto */
+    transition: opacity 1s ease-in-out; /* Suaviza la transición */
+}
+.invisible-box3 img.active {
+    opacity: 1;
+}
 
 /* Sección About */
 .about {
