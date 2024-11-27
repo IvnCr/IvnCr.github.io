@@ -186,7 +186,8 @@ header {
 
 .main-content {
     padding: 2rem;
-    background-color: #f9f9f9;
+    background: linear-gradient(to right, #fffff4, #fbe2ff);
+
 }
 
 .tire-catalog h1 {
