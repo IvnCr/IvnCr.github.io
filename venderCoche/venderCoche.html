@@ -4,14 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="venderCoche.css">
+    <title>Vende tu coche</title>
+    <link rel="stylesheet" href="./venderCoche.css">
     <link rel="icon" type="image/x-icon" href="../Imagenes/Logos/favicon.ico">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="node_modules/@popperjs/core/dist/umd/popper.js"></script>
-    <title>JDMDrive</title>
+    <script src="../index.js"></script>
 </head>
 
 <body>
@@ -21,13 +22,37 @@
             <div class="logo">
                 <a href="../index.html"><img src="../Imagenes/Logos/JDMDrive.png" alt="JDMDrive Logo"></a>
             </div>
+
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" placeholder="=  Búsqueda" class="search-bar">
+                <button class="search-button"><i class="fas fa-search"></i></button>
+            </div>
+
             <!-- Navigation Links -->
             <ul class="nav-links">
                 <li><a href="../index.html">Sobre Nosotros</a></li>
                 <li><a href="../noticias/noticias.html">Noticias</a></li>
-                <li><a href="../categoriasDestacadas/cocheNuevo.html">Comprar</a></li>
-                <li><a href="#">Vender</a></li>
+                <li><a href="#">Comprar</a></li>
+                <li><a href="../venderCoche/venderCoche.html">Vender</a></li>
             </ul>
+            <button id="mute-button" class="mute-button">
+                <i class="fas fa-volume-up"></i>
+            </button>
+            <!-- Icons and Account -->
+            <div class="account-container">
+                <!-- Contenedor de la cuenta y el logo de login -->
+                <div class="account-combined">
+                    <!-- Icono del logo -->
+                    <div class="login">
+                        <img src="../Imagenes/login.png" alt="Login">
+                    </div>
+
+                    <!-- Botón de cuenta -->
+                    <a href="../inicioSesion-Registrase/iniciarSesion.html" class="account-button">
+                        Mi Cuenta
+                    </a>
+                </div>
         </nav>
     </header>
     <main>
