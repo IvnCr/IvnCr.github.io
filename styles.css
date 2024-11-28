@@ -353,7 +353,7 @@ button:hover {
     position: relative;
     /* Relativa para que los elementos con absolute se posicionen dentro */
     padding: 20px;
-    background: white;
+    background: linear-gradient(to right, #fffff4, #fbe2ff);
     margin-left: 5%;
     margin-right: 5%;
     border-bottom-left-radius: 20px;
@@ -476,7 +476,7 @@ button:hover {
 /* Contenedor principal para la sección de marcas */
 .brands {
     margin-top: 2%;
-    background: white;
+    background: linear-gradient(to right, #fbe2ff, #fffff4);
     margin-left: 5%;
     margin-right: 5%;
     border-radius: 20px;
@@ -586,6 +586,7 @@ button:hover {
     /* Bordes redondeados */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     /* Sombra */
+    background-color: #ffffff;
 }
 
 /* Efecto hover para cada logo */
@@ -679,7 +680,7 @@ button:hover {
     /* Alineada a la parte inferior */
     left: auto;
     /* Alineada a la izquierda para que cubra todo el cuadro */
-    width: 85%;
+    width: 80%;
     /* Ancho de la imagen que se ajuste al contenedor */
     height: 100%;
     /* Altura de la imagen que se ajuste al contenedor */
@@ -689,6 +690,7 @@ button:hover {
     /* Ajustar bordes redondeados si es necesario */
     border-bottom-left-radius: 200px;
     border-bottom-right-radius: 20px;
+    border-top-right-radius: 20px;
     display: flex;
     opacity: 0; /* Oculta imágenes por defecto */
     transition: opacity 1s ease-in-out; /* Suaviza la transición */
