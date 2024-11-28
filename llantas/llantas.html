@@ -10,6 +10,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="node_modules/@popperjs/core/dist/umd/popper.js"></script>
@@ -24,13 +25,11 @@
             <div class="logo">
                 <a href="../index.html"><img src="../Imagenes/Logos/JDMDrive.png" alt="JDMDrive Logo"></a>
             </div>
-
             <!-- Search Bar -->
             <div class="search-container">
                 <input type="text" placeholder="=  Búsqueda" class="search-bar">
                 <button class="search-button"><i class="fas fa-search"></i></button>
             </div>
-
             <!-- Navigation Links -->
             <ul class="nav-links">
                 <li><a href="../index.html">Sobre Nosotros</a></li>
@@ -41,7 +40,6 @@
             <button id="mute-button" class="mute-button">
                 <i class="fas fa-volume-up"></i>
             </button>
-
             <!-- Icons and Account -->
             <div class="account-container">
                 <!-- Contenedor de la cuenta y el logo de login -->
@@ -50,7 +48,6 @@
                     <div class="login">
                         <img src="../Imagenes/login.png" alt="Login">
                     </div>
-
                     <!-- Botón de cuenta -->
                     <a href="../inicioSesion-Registrase/iniciarSesion.html" class="account-button">
                         Mi Cuenta
@@ -73,53 +70,64 @@
                             <span class="old-price">399.99€</span>
                         </p>
                     </div>
+                    <div class="stock-status in-stock">
+                        <i class="icon fas fa-check-circle"></i> En Stock
+                    </div>
                 </article>
-                
-    
                 <article class="tire-card">
                     <div class="brand-badge">OZ Racing</div> <!-- Cartelito con la marca -->
-                    <img src="../Imagenes/Llantas/OZ/llanta-para-coche-oz-racing-leggenda-blanco-carrera.jpg" alt="OZ Racing">
+                    <img src="../Imagenes/Llantas/OZ/llanta-para-coche-oz-racing-leggenda-blanco-carrera.jpg"
+                        alt="OZ Racing">
                     <div class="tire-info">
                         <h2>Llanta OZ Racing Leggenda Carrera</h2>
                         <p class="tire-price">
-                            <span class="current-price">314.96€</span>  
-                            <span class="old-price">331.99€</span>  
+                            <span class="current-price">314.96€</span>
+                            <span class="old-price">331.99€</span>
                         </p>
                     </div>
+                    <div class="stock-status out-of-stock">
+                        <i class="icon fas fa-times-circle"></i> Agotado
+                    </div>
                 </article>
-    
                 <article class="tire-card">
                     <div class="brand-badge">OZ Racing</div> <!-- Cartelito con la marca -->
                     <img src="../Imagenes/Llantas/OZ/llanta-para-coche-oz-racing-Ultaleggera-hlt.jpg" alt="OZ Racing">
                     <div class="tire-info">
                         <h2>Llanta OZ Racing Ultraleggera HLT</h2>
                         <p class="tire-price">
-                            <span class="current-price">574.95€</span>  
-                            <span class="old-price">605.01€</span>  
+                            <span class="current-price">574.95€</span>
+                            <span class="old-price">605.01€</span>
                         </p>
                     </div>
+                    <div class="stock-status in-stock">
+                        <i class="icon fas fa-check-circle"></i> En Stock
+                    </div>
                 </article>
-    
                 <article class="tire-card">
                     <div class="brand-badge">OZ Racing</div> <!-- Cartelito con la marca -->
                     <img src="../Imagenes/Llantas/OZ/llanta-para-coche-oz-racing-rally-racing.jpg" alt="Platin">
                     <div class="tire-info">
                         <h2>Llanta OZ Racing Rally Racing</h2>
                         <p class="tire-price">
-                            <span class="current-price">406.92€</span>  
-                            <span class="old-price">429.99€</span>  
+                            <span class="current-price">406.92€</span>
+                            <span class="old-price">429.99€</span>
                         </p>
                     </div>
+                    <div class="stock-status out-of-stock">
+                        <i class="icon fas fa-times-circle"></i> Agotado
+                    </div>
                 </article>
-    
                 <article class="tire-card">
                     <div class="brand-badge">Platin</div> <!-- Cartelito con la marca -->
                     <img src="../Imagenes/Llantas/Platin/llanta-para-coche-platin-p100-negro-brillo.jpg" alt="Platin">
                     <div class="tire-info">
                         <h2>Llanta Platin P100 negro brillo</h2>
                         <p class="tire-price">
-                            <span class="current-price">220.50€</span>  
+                            <span class="current-price">220.50€</span>
                         </p>
+                    </div>
+                    <div class="stock-status in-stock">
+                        <i class="icon fas fa-check-circle"></i> En Stock
                     </div>
                 </article>
                 <article class="tire-card">
@@ -128,8 +136,11 @@
                     <div class="tire-info">
                         <h2>Llanta Platin P110</h2>
                         <p class="tire-price">
-                            <span class="current-price">195.00€</span>  
+                            <span class="current-price">195.00€</span>
                         </p>
+                    </div>
+                    <div class="stock-status out-of-stock">
+                        <i class="icon fas fa-times-circle"></i> Agotado
                     </div>
                 </article>
                 <article class="tire-card">
@@ -138,8 +149,11 @@
                     <div class="tire-info">
                         <h2>Llanta Platin P114</h2>
                         <p class="tire-price">
-                            <span class="current-price">220.00€</span>  
+                            <span class="current-price">220.00€</span>
                         </p>
+                    </div>
+                    <div class="stock-status in-stock">
+                        <i class="icon fas fa-check-circle"></i> En Stock
                     </div>
                 </article>
                 <article class="tire-card">
@@ -148,17 +162,24 @@
                     <div class="tire-info">
                         <h2>Llanta Platin P116 negro bronce</h2>
                         <p class="tire-price">
-                            <span class="current-price">250.00€</span>                      
+                            <span class="current-price">250.00€</span>
                         </p>
+                    </div>
+                    <div class="stock-status in-stock">
+                        <i class="icon fas fa-check-circle"></i> En Stock
                     </div>
                 </article>
                 <article class="tire-card">
-                    <img src="../Imagenes/Llantas/Sparco/llanta-para-coche-oz-racing-leggenda-blanco-carrera.jpg" alt="Sparco">
+                    <img src="../Imagenes/Llantas/Sparco/llanta-para-coche-oz-racing-leggenda-blanco-carrera.jpg"
+                        alt="Sparco">
                     <div class="tire-info">
                         <h2>Llanta Sparco FF3 Flowform</h2>
                         <p class="tire-price">
-                            <span class="current-price">368.00€</span>  
+                            <span class="current-price">368.00€</span>
                         </p>
+                    </div>
+                    <div class="stock-status in-stock">
+                        <i class="icon fas fa-check-circle"></i> En Stock
                     </div>
                 </article>
                 <article class="tire-card">
@@ -167,8 +188,11 @@
                         <h2>Llanta Sparco Gravel</h2>
                         <p class="tire-price">
                             <span class="current-price">304.06€</span>
-                            <span class="old-price">349.99€</span>  
+                            <span class="old-price">349.99€</span>
                         </p>
+                    </div>
+                    <div class="stock-status in-stock">
+                        <i class="icon fas fa-check-circle"></i> En Stock
                     </div>
                 </article>
                 <article class="tire-card">
@@ -176,18 +200,25 @@
                     <div class="tire-info">
                         <h2>Llanta Sparco Asetto Gara Black</h2>
                         <p class="tire-price">
-                            <span class="current-price">211.51€</span>  
+                            <span class="current-price">211.51€</span>
                         </p>
+                    </div>
+                    <div class="stock-status out-of-stock">
+                        <i class="icon fas fa-times-circle"></i> Agotado
                     </div>
                 </article>
                 <article class="tire-card">
-                    <img src="../Imagenes/Llantas/Sparco/llantas-para-coche-sparco-assetto-gara-bronce.jpg" alt="Sparco">
+                    <img src="../Imagenes/Llantas/Sparco/llantas-para-coche-sparco-assetto-gara-bronce.jpg"
+                        alt="Sparco">
                     <div class="tire-info">
                         <h2>Llanta Sparco Asetto Gara Bronce</h2>
                         <p class="tire-price">
-                            <span class="current-price">318.41€</span> 
-                            <span class="old-price">349.99€</span>  
+                            <span class="current-price">318.41€</span>
+                            <span class="old-price">349.99€</span>
                         </p>
+                    </div>
+                    <div class="stock-status in-stock">
+                        <i class="icon fas fa-check-circle"></i> En Stock
                     </div>
                 </article>
                 <article class="tire-card">
@@ -196,8 +227,11 @@
                         <h2>Llanta Japan racing JR-9</h2>
                         <p class="tire-price">
                             <span class="current-price">145.00€</span>
-                            <span class="old-price">159.99€</span>  
+                            <span class="old-price">159.99€</span>
                         </p>
+                    </div>
+                    <div class="stock-status in-stock">
+                        <i class="icon fas fa-check-circle"></i> En Stock
                     </div>
                 </article>
                 <article class="tire-card">
@@ -205,8 +239,11 @@
                     <div class="tire-info">
                         <h2>Llanta Japan racing JR-46 news 2024</h2>
                         <p class="tire-price">
-                            <span class="current-price">270.00€</span>  
+                            <span class="current-price">270.00€</span>
                         </p>
+                    </div>
+                    <div class="stock-status out-of-stock">
+                        <i class="icon fas fa-times-circle"></i> Agotado
                     </div>
                 </article>
                 <article class="tire-card">
@@ -214,8 +251,11 @@
                     <div class="tire-info">
                         <h2>Llanta Japan racing JR-23</h2>
                         <p class="tire-price">
-                            <span class="current-price">180.00€</span>  
+                            <span class="current-price">180.00€</span>
                         </p>
+                    </div>
+                    <div class="stock-status in-stock">
+                        <i class="icon fas fa-check-circle"></i> En Stock
                     </div>
                 </article>
                 <article class="tire-card">
@@ -223,22 +263,23 @@
                     <div class="tire-info">
                         <h2>Llanta Japan racing JR-14</h2>
                         <p class="tire-price">
-                            <span class="current-price">170.00€</span>  
-                            <span class="old-price">179.99€</span>  
+                            <span class="current-price">170.00€</span>
+                            <span class="old-price">179.99€</span>
                         </p>
+                    </div>
+                    <div class="stock-status in-stock">
+                        <i class="icon fas fa-check-circle"></i> En Stock
                     </div>
                 </article>
             </div>
         </section>
     </main>
     
-
     <footer class="footer">
         <!-- Contenedor izquierdo con el logo -->
         <div class="footer-left">
             <img src="../Imagenes/Logos/JDMDrive.png" alt="JDMDrive Logo" class="footer-logo">
         </div>
-
         <!-- Contenedor central con el texto de derechos reservados -->
         <div class="footer-center">
             <p xmlns:cc="http://creativecommons.org/ns#">
@@ -257,7 +298,6 @@
                 </a>
             </p>
         </div>
-
         <!-- Contenedor derecho con los íconos de redes sociales -->
         <div class="footer-right">
             <a title="icr0015@alu.medac.es" href="#" class="footer-icon"><img src="../Imagenes/RRSS-COPY/gmail.png"

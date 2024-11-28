@@ -282,10 +282,34 @@ header {
     font-weight: bold;
 
 }
+/* Estilos para el estado de stock */
+.stock-status {
+    position: absolute;
+    bottom: 10px; /* Alineado en la parte inferior de la tarjeta */
+    left: 50%;
+    transform: translateX(-50%); /* Centrado horizontalmente */
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: #fff;
+    gap:8px
+}
 
+/* Para las llantas en stock */
+.in-stock {
+    background-color: #4CAF50; /* Verde para "En Stock" */
+}
 
-
-
+/* Para las llantas agotadas */
+.out-of-stock {
+    background-color: #f44336; /* Rojo para "Agotado" */
+}
+/* Iconos de estado */
+.stock-status .icon {
+    font-size: 1.2rem; /* Tamaño del icono */
+}
 
 
 /* Estilo general del footer */
