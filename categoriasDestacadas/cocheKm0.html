@@ -16,6 +16,64 @@
     <script src="../index.js"></script>
 
 </head>
+<style>
+    .modal {
+        display: none;
+        /* Oculto por defecto */
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 1000;
+        background-color: rgb(180, 20, 20);
+        box-shadow: 0 16px 30px rgba(0, 0, 0, 0.3);
+        border-radius: 12px;
+        padding: 20px;
+        width: 320px;
+        font-family: 'Poppins', sans-serif;
+        color: #fff;
+    }
+
+    .modal-content {
+        position: relative;
+        font-size: 16px;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .modal-content p {
+        margin: 0;
+        padding-top: 10px;
+    }
+
+    .close-button {
+        position: absolute;
+        top: 12px;
+        right: 12px;
+        color: #fff;
+        font-size: 22px;
+        font-weight: bold;
+        cursor: pointer;
+        background: rgba(255, 255, 255, 0.3);
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .close-button:hover,
+    .close-button:focus {
+        background: rgba(255, 255, 255, 0.5);
+        color: #333;
+    }
+
+    .modal-icon {
+        font-size: 40px;
+        margin-bottom: 10px;
+    }
+</style>
 
 <body>
     <header>
@@ -58,7 +116,37 @@
                 </div>
         </nav>
     </header>
+    <div id="maintenance-modal" class="modal">
+        <div class="modal-content">
+            <span id="close-modal" class="close-button">&times;</span>
+            <div class="modal-icon">
+                <i class="fas fa-tools"></i>
+            </div>
+            <p><strong>¡Atención!</strong></p>
+            <p>La página está en mantenimiento. La funcionalidad de poder ver los detalles del vehiculo y su compra pueden no estar disponibles.</p>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const modal = document.getElementById("maintenance-modal");
+            const closeModal = document.getElementById("close-modal");
 
+            // Mostrar el modal al cargar la página
+            modal.style.display = "block";
+
+            // Cerrar el modal al hacer clic en la 'x'
+            closeModal.onclick = function () {
+                modal.style.display = "none";
+            };
+
+            // Cerrar el modal al hacer clic fuera del contenido
+            window.onclick = function (event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            };
+        });
+    </script>
     <main class="main-content">
         <div class="container">
             <section class="search-form">
@@ -95,8 +183,8 @@
                 <h2 class="sr-only">Lista de Coches Disponibles</h2>
                 <div class="car-grid">
                     <article class="car-card">
-                        <a href="../detallesCoche/cochesKm0/detallesAcuraNSX.html">
-                            <img src="../Imagenes/fotosMarcasCoches/Honda/2022-Acura-NSX-Type-S-15.webp" alt="Acura NSX" class="car-image">
+                            <img src="../Imagenes/fotosMarcasCoches/Honda/2022-Acura-NSX-Type-S-15.webp" alt="Acura NSX"
+                                class="car-image">
                             <div class="car-info">
                                 <h3>Acura NSX Special Edition</h3>
                                 <div class="car-details">
@@ -105,12 +193,11 @@
                                 <p class="car-price">560.000€</p>
                                 <p class="car-warranty">Garantía 6 años - IVA incluido</p>
                             </div>
-                        </a>
                     </article>
 
                     <article class="car-card">
-                        <a href="../detallesCoche/cochesKm0/detallesNissan350z.html">
-                            <img src="../Imagenes/fotosMarcasCoches/Nissan/Nissan-350Z.webp" alt="Nissan 350Z" class="car-image">
+                            <img src="../Imagenes/fotosMarcasCoches/Nissan/Nissan-350Z.webp" alt="Nissan 350Z"
+                                class="car-image">
                             <div class="car-info">
                                 <h3>Nissan 350Z</h3>
                                 <div class="car-details">
@@ -119,12 +206,12 @@
                                 <p class="car-price">33.000€</p>
                                 <p class="car-warranty">Garantía 2 años - IVA incluido</p>
                             </div>
-                        </a>
                     </article>
 
                     <article class="car-card">
                         <a href="../detallesCoche/cochesNuevo/detallesNissanGtr35.html">
-                            <img src="../Imagenes/fotosMarcasCoches/Nissan/Nissan-GTR35-Nismo(1).webp" alt="Nissan GTR R35 Nismo" class="car-image">
+                            <img src="../Imagenes/fotosMarcasCoches/Nissan/Nissan-GTR35-Nismo(1).webp"
+                                alt="Nissan GTR R35 Nismo" class="car-image">
                             <div class="car-info">
                                 <div class="car-title">
                                     <h3>Nissan GTR R35 Nismo</h3>
@@ -138,11 +225,12 @@
                             </div>
                         </a>
                     </article>
-                    
+
 
                     <article class="car-card">
                         <a href="../detallesCoche/cochesKm0/detallesToyotaSupra.html">
-                            <img src="../Imagenes/fotosMarcasCoches/Toyota/Toyota_SupraMk5.jpg" alt="Toyota Supra" class="car-image">
+                            <img src="../Imagenes/fotosMarcasCoches/Toyota/Toyota_SupraMk5.jpg" alt="Toyota Supra"
+                                class="car-image">
                             <div class="car-info">
                                 <h3>Toyota Supra</h3>
                                 <div class="car-details">

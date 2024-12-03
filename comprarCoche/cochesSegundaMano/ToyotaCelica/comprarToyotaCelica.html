@@ -14,13 +14,128 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="node_modules/@popperjs/core/dist/umd/popper.js"></script>
 </head>
+<style>
+    /* Estilos del modal */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Fondo oscuro con algo de transparencia */
+        animation: fadeIn 0.3s ease-in-out;
+        /* Transición suave de entrada */
+    }
+
+    /* Animación para el fadeIn */
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    /* Modal content */
+    .modal-content {
+        background-color: #ffffff;
+        /* Color oscuro elegante, como un gris oscuro o negro */
+        margin: 10% auto;
+        padding: 30px;
+        border-radius: 8px;
+        /* Bordes redondeados para un diseño más suave */
+        width: 90%;
+        max-width: 600px;
+        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+        color: #ecf0f1;
+        /* Color claro para el texto */
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        animation: scaleIn 0.3s ease-out;
+        /* Transición de aparición */
+    }
+
+    /* Animación para el scaleIn */
+    @keyframes scaleIn {
+        0% {
+            transform: scale(0.8);
+            opacity: 0;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    /* Título dentro del modal */
+    .modal-content h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #63136a;
+        /* Un toque dorado para resaltar */
+    }
+
+    /* Botón de cierre */
+    .close {
+        color: #ecf0f1;
+        font-size: 30px;
+        font-weight: bold;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        transition: color 0.3s ease;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #e74c3c;
+        /* Rojo para dar un toque de urgencia al cerrar */
+        cursor: pointer;
+    }
+
+    /* Estilo de los botones dentro del modal */
+    .modal button {
+        background-color: #4a0e4e;
+        /* Color dorado para el botón, asociado a lujo */
+        color: #fff;
+        border: none;
+        padding: 12px 25px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .modal button:hover {
+        background-color: #63136a;
+        /* Un dorado más oscuro al pasar el cursor */
+    }
+
+    /* Estilo adicional para el texto */
+    .modal-content p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        line-height: 1.6;
+        color: #727272;
+        /* Gris claro para un contraste suave con el fondo oscuro */
+    }
+</style>
 
 <body>
     <header>
         <nav class="navbar">
             <!-- Logo -->
             <div class="logo">
-                <a href="../../../detallesCoche/cochesSegundaMano/detallesToyotaCelica.html"><img src="../../../Imagenes/Logos/JDMDrive.png" alt="JDMDrive Logo"></a>
+                <a href="../../../detallesCoche/cochesSegundaMano/detallesToyotaCelica.html"><img
+                        src="../../../Imagenes/Logos/JDMDrive.png" alt="JDMDrive Logo"></a>
             </div>
 
             <!-- Search Bar -->
@@ -122,12 +237,50 @@
                     <label for="codigo-postal">Código Postal:</label>
                     <input type="text" id="codigo-postal" name="codigo-postal" required>
                 </div>
-                <button type="submit" class="submit-btn">Comprar</button>
+                <button type="button" id="buyButton" class="submit-btn btn btn-success">Comprar</button>
             </form>
             <img src="../../../Imagenes/illaves.png" alt="Key" class="icon icon-bottom-left">
         </div>
     </main>
+    <!-- El modal -->
+    <div id="compraModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>¡Compra realizada con éxito!</h2>
+            <p>¡Gracias por tu compra! Hemos recibido tu pedido y te enviaremos una confirmación por correo electrónico.
+            </p>
+            <button type="button" onclick="cerrarModal()">Cerrar</button>
+        </div>
+    </div>
 
+    <script>
+        // Obtener elementos del DOM
+        var modal = document.getElementById("compraModal");
+        var btn = document.getElementById("buyButton");
+        var span = document.getElementsByClassName("close")[0];
+
+        // Cuando el usuario haga clic en "Comprar", se abrirá el modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // Cuando el usuario haga clic en "x", se cierra el modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // Cuando el usuario haga clic en el botón "Cerrar"
+        function cerrarModal() {
+            modal.style.display = "none";
+        }
+
+        // Cuando el usuario haga clic fuera del modal, también se cerrará
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
     <footer class="footer">
         <!-- Contenedor izquierdo con el logo -->
@@ -138,23 +291,28 @@
         <!-- Contenedor central con el texto de derechos reservados -->
         <div class="footer-center">
             <p xmlns:cc="http://creativecommons.org/ns#">
-                Este trabajo está licenciado bajo 
-                <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
+                Este trabajo está licenciado bajo
+                <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank"
+                    rel="license noopener noreferrer" style="display:inline-block;">
                     CC BY-NC-ND 4.0
-                    <img style="height:22px !important; margin-left:3px; vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="CC icon">
-                    <img style="height:22px !important; margin-left:3px; vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="BY icon">
-                    <img style="height:22px !important; margin-left:3px; vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="NC icon">
-                    <img style="height:22px !important; margin-left:3px; vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt="ND icon">
+                    <img style="height:22px !important; margin-left:3px; vertical-align:text-bottom;"
+                        src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="CC icon">
+                    <img style="height:22px !important; margin-left:3px; vertical-align:text-bottom;"
+                        src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="BY icon">
+                    <img style="height:22px !important; margin-left:3px; vertical-align:text-bottom;"
+                        src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="NC icon">
+                    <img style="height:22px !important; margin-left:3px; vertical-align:text-bottom;"
+                        src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt="ND icon">
                 </a>
             </p>
         </div>
 
         <!-- Contenedor derecho con los íconos de redes sociales -->
         <div class="footer-right">
-            <a title="icr0015@alu.medac.es" href="#" class="footer-icon"><img src="../../../Imagenes/RRSS-COPY/gmail.png"
-                    alt="Email Icon"></a>
-            <a href="https://x.com/IvnCr33" class="footer-icon"><img src="../../../Imagenes/RRSS-COPY/x-removebg-preview.png"
-                    alt="Twitter Icon"></a>
+            <a title="icr0015@alu.medac.es" href="#" class="footer-icon"><img
+                    src="../../../Imagenes/RRSS-COPY/gmail.png" alt="Email Icon"></a>
+            <a href="https://x.com/IvnCr33" class="footer-icon"><img
+                    src="../../../Imagenes/RRSS-COPY/x-removebg-preview.png" alt="Twitter Icon"></a>
             <a href="https://www.instagram.com/ivn.cr/profilecard/" class="footer-icon"><img
                     src="../../../Imagenes/RRSS-COPY/Instagram.webp" alt="Instagram Icon"></a>
             <a href="https://www.tiktok.com/@ivvn.cr?_t=8qGUB5DLv84&_r=1" class="footer-icon"><img

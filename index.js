@@ -90,3 +90,4 @@ function changeInvisible3Image() {
 }
 
 setInterval(changeInvisible3Image, 3000); // Cambia cada 3 segundos
+

@@ -13,7 +13,10 @@ html {
 h2 {
     font-family: 'Courier New', Courier, monospace;
 }
-
+h3 {
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
 main {
     margin: 5%;
     border-radius: 20px;

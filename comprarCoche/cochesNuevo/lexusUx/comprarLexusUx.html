@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comprar coche</title>
-    <link rel="stylesheet" href="comprarCoche.css">
+    <link rel="stylesheet" href="./comprarCoche.css">
     <link rel="icon" type="image/x-icon" href="../../../Imagenes/Logos/favicon.ico">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
@@ -13,16 +13,130 @@
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
     <script src="node_modules/@popperjs/core/dist/umd/popper.js"></script>
-    <script src="../../../index.js"></script>
-
 </head>
+
+<style>
+    /* Estilos del modal */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.5);
+        /* Fondo oscuro con algo de transparencia */
+        animation: fadeIn 0.3s ease-in-out;
+        /* Transición suave de entrada */
+    }
+
+    /* Animación para el fadeIn */
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        100% {
+            opacity: 1;
+        }
+    }
+
+    /* Modal content */
+    .modal-content {
+        background-color: #ffffff;
+        /* Color oscuro elegante, como un gris oscuro o negro */
+        margin: 10% auto;
+        padding: 30px;
+        border-radius: 8px;
+        /* Bordes redondeados para un diseño más suave */
+        width: 90%;
+        max-width: 600px;
+        box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.4);
+        color: #ecf0f1;
+        /* Color claro para el texto */
+        font-family: 'Roboto', sans-serif;
+        text-align: center;
+        animation: scaleIn 0.3s ease-out;
+        /* Transición de aparición */
+    }
+
+    /* Animación para el scaleIn */
+    @keyframes scaleIn {
+        0% {
+            transform: scale(0.8);
+            opacity: 0;
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    /* Título dentro del modal */
+    .modal-content h2 {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #63136a;
+        /* Un toque dorado para resaltar */
+    }
+
+    /* Botón de cierre */
+    .close {
+        color: #ecf0f1;
+        font-size: 30px;
+        font-weight: bold;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        transition: color 0.3s ease;
+    }
+
+    .close:hover,
+    .close:focus {
+        color: #e74c3c;
+        /* Rojo para dar un toque de urgencia al cerrar */
+        cursor: pointer;
+    }
+
+    /* Estilo de los botones dentro del modal */
+    .modal button {
+        background-color: #4a0e4e;
+        /* Color dorado para el botón, asociado a lujo */
+        color: #fff;
+        border: none;
+        padding: 12px 25px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .modal button:hover {
+        background-color: #63136a;
+        /* Un dorado más oscuro al pasar el cursor */
+    }
+
+    /* Estilo adicional para el texto */
+    .modal-content p {
+        font-size: 16px;
+        margin-bottom: 20px;
+        line-height: 1.6;
+        color: #727272;
+        /* Gris claro para un contraste suave con el fondo oscuro */
+    }
+</style>
 
 <body>
     <header>
         <nav class="navbar">
             <!-- Logo -->
             <div class="logo">
-                <a href="../../../detallesCoche/cochesNuevo/detallesLexusUx.html"><img src="../../../Imagenes/Logos/JDMDrive.png" alt="JDMDrive Logo"></a>
+                <a href="../../../detallesCoche/cochesNuevo/detallesLexusUx.html"><img
+                        src="../../../Imagenes/Logos/JDMDrive.png" alt="JDMDrive Logo"></a>
             </div>
 
             <!-- Search Bar -->
@@ -44,14 +158,10 @@
 
             <!-- Icons and Account -->
             <div class="account-container">
-                <!-- Contenedor de la cuenta y el logo de login -->
                 <div class="account-combined">
-                    <!-- Icono del logo -->
                     <div class="login">
                         <img src="../../../Imagenes/login.png" alt="Login">
                     </div>
-
-                    <!-- Botón de cuenta -->
                     <a href="../../../inicioSesion-Registrase/iniciarSesion.html" class="account-button">
                         Mi Cuenta
                     </a>
@@ -62,8 +172,6 @@
     <main>
         <div class="form-container2">
             <h2>Detalles del vehículo</h2>
-            <img src="../../../Imagenes/clip.webp" alt="Clip" class="icon icon-top-left">
-            <img src="../../../Imagenes/Llave.png" alt="Key" class="icon icon-top-right2">
             <form>
                 <div class="form-group">
                     <label for="marca-modelo">Marca/Modelo:</label>
@@ -78,12 +186,10 @@
                     <span class="underline">33.000€</span>
                 </div>
             </form>
-            <img src="../../../Imagenes/illaves.png" alt="Key" class="icon icon-bottom-left">
         </div>
+
         <div class="form-container">
             <h2>Comprador del Vehículo</h2>
-            <img src="../../../Imagenes/clip.webp" alt="Clip" class="icon icon-top-left">
-            <img src="../../../Imagenes/Llave.png" alt="Key" class="icon icon-top-right1">
             <form>
                 <h3>Información del Comprador:</h3>
                 <div class="form-group">
@@ -98,6 +204,7 @@
                     <label for="telefono">Teléfono:</label>
                     <input type="tel" id="telefono" name="telefono" required>
                 </div>
+
                 <h3>Información de Pago:</h3>
                 <div class="form-group">
                     <label for="tarjeta">Número de Tarjeta:</label>
@@ -111,6 +218,7 @@
                     <label for="cvv">Código de Seguridad (CVV):</label>
                     <input type="text" id="cvv" name="cvv" required>
                 </div>
+
                 <h3>Dirección de facturación:</h3>
                 <div class="form-group">
                     <label for="calle">Calle:</label>
@@ -124,12 +232,52 @@
                     <label for="codigo-postal">Código Postal:</label>
                     <input type="text" id="codigo-postal" name="codigo-postal" required>
                 </div>
-                <button type="submit" class="submit-btn">Comprar</button>
+
+                <!-- Botón de "Comprar" -->
+                <button type="button" id="buyButton" class="submit-btn btn btn-success">Comprar</button>
             </form>
-            <img src="../../../Imagenes/illaves.png" alt="Key" class="icon icon-bottom-left">
         </div>
     </main>
 
+    <!-- El modal -->
+    <div id="compraModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>¡Compra realizada con éxito!</h2>
+            <p>¡Gracias por tu compra! Hemos recibido tu pedido y te enviaremos una confirmación por correo electrónico.
+            </p>
+            <button type="button" onclick="cerrarModal()">Cerrar</button>
+        </div>
+    </div>
+
+    <script>
+        // Obtener elementos del DOM
+        var modal = document.getElementById("compraModal");
+        var btn = document.getElementById("buyButton");
+        var span = document.getElementsByClassName("close")[0];
+
+        // Cuando el usuario haga clic en "Comprar", se abrirá el modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // Cuando el usuario haga clic en "x", se cierra el modal
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // Cuando el usuario haga clic en el botón "Cerrar"
+        function cerrarModal() {
+            modal.style.display = "none";
+        }
+
+        // Cuando el usuario haga clic fuera del modal, también se cerrará
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 
     <footer class="footer">
         <!-- Contenedor izquierdo con el logo -->
@@ -140,33 +288,40 @@
         <!-- Contenedor central con el texto de derechos reservados -->
         <div class="footer-center">
             <p xmlns:cc="http://creativecommons.org/ns#">
-                Este trabajo está licenciado bajo 
-                <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">
+                Este trabajo está licenciado bajo
+                <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/?ref=chooser-v1" target="_blank"
+                    rel="license noopener noreferrer" style="display:inline-block;">
                     CC BY-NC-ND 4.0
-                    <img style="height:22px !important; margin-left:3px; vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="CC icon">
-                    <img style="height:22px !important; margin-left:3px; vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="BY icon">
-                    <img style="height:22px !important; margin-left:3px; vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="NC icon">
-                    <img style="height:22px !important; margin-left:3px; vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt="ND icon">
+                    <img style="height:22px !important; margin-left:3px; vertical-align:text-bottom;"
+                        src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt="CC icon">
+                    <img style="height:22px !important; margin-left:3px; vertical-align:text-bottom;"
+                        src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt="BY icon">
+                    <img style="height:22px !important; margin-left:3px; vertical-align:text-bottom;"
+                        src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt="NC icon">
+                    <img style="height:22px !important; margin-left:3px; vertical-align:text-bottom;"
+                        src="https://mirrors.creativecommons.org/presskit/icons/nd.svg?ref=chooser-v1" alt="ND icon">
                 </a>
             </p>
         </div>
 
         <!-- Contenedor derecho con los íconos de redes sociales -->
         <div class="footer-right">
-            <a title="icr0015@alu.medac.es" href="#" class="footer-icon"><img src="../../../Imagenes/RRSS-COPY/gmail.png"
-                    alt="Email Icon"></a>
-            <a href="https://x.com/IvnCr33" class="footer-icon"><img src="../../../Imagenes/RRSS-COPY/x-removebg-preview.png"
-                    alt="Twitter Icon"></a>
+            <a title="icr0015@alu.medac.es" href="#" class="footer-icon"><img
+                    src="../../../Imagenes/RRSS-COPY/gmail.png" alt="Email Icon"></a>
+            <a href="https://x.com/IvnCr33" class="footer-icon"><img
+                    src="../../../Imagenes/RRSS-COPY/x-removebg-preview.png" alt="Twitter Icon"></a>
             <a href="https://www.instagram.com/ivn.cr/profilecard/" class="footer-icon"><img
                     src="../../../Imagenes/RRSS-COPY/Instagram.webp" alt="Instagram Icon"></a>
             <a href="https://www.tiktok.com/@ivvn.cr?_t=8qGUB5DLv84&_r=1" class="footer-icon"><img
                     src="../../../Imagenes/RRSS-COPY/tiktok.webp" alt="Tiktok Icon"></a>
         </div>
     </footer>
+
     <audio id="background-audio" loop style="display:none;">
         <source src="../../../Multimedia/Audio/audioFondo.mp3" type="audio/mp3">
         Tu navegador no soporta la etiqueta de audio.
     </audio>
+
 </body>
 
 </html>

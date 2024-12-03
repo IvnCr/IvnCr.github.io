@@ -323,4 +323,113 @@ main {
 .footer-icon img:hover {
     transform: scale(1.1); /* Aumentar tamaño al pasar el cursor */
 }
+/* Estilo base: ya definido en el CSS original */
+
+/* Adaptaciones para pantallas más pequeñas */
+@media (max-width: 768px) {
+    /* Ajustar el tamaño general del cuerpo y los márgenes */
+    main {
+        margin: 3%;
+        margin-top: 10%;
+        padding: 15px;
+    }
+
+    /* Reducir tamaño del logo */
+    .logo img {
+        height: 30px;
+    }
+
+    /* Ajustar barra de navegación */
+    .navbar {
+        flex-direction: column; /* Disponer en columna */
+        align-items: flex-start; /* Alinear a la izquierda */
+    }
+
+    .navbar a {
+        font-size: 14px; /* Reducir tamaño de los enlaces */
+        margin: 5px 0; /* Ajustar márgenes */
+    }
+
+    /* Ajustar la barra de búsqueda */
+    .search-bar {
+        width: 100%; /* Que ocupe todo el ancho */
+        margin-bottom: 10px;
+    }
+
+    .search-button {
+        margin-left: -30px;
+    }
+
+    /* Ajustar el contenedor de la cuenta */
+    .account-container {
+        flex-direction: column; /* Disponer en columna */
+        gap: 10px; /* Ajustar separación */
+    }
+
+    .account-button {
+        padding: 5px 10px; /* Reducir tamaño */
+    }
+
+    /* Ajustar contenedor de miniaturas */
+    .contenedor-miniaturas {
+        flex-wrap: wrap; /* Permitir varias filas */
+    }
+
+    .miniatura {
+        width: calc(50% - 5px); /* Dos por fila */
+        margin-bottom: 5px; /* Separación vertical */
+    }
+
+    /* Ajustar detalles del carro */
+    .detalles-carro {
+        padding: 15px;
+    }
+
+    .titulo-carro {
+        flex-direction: column; /* Apilar título y precio */
+        align-items: flex-start;
+    }
+
+    /* Ajustar footer */
+    .footer {
+        flex-direction: column;
+        height: auto;
+        padding: 20px 10px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Adaptaciones para pantallas muy pequeñas */
+    header {
+        position: relative; /* Quitar la posición fija para mejor ajuste */
+    }
+
+    .navbar {
+        align-items: center; /* Centrar elementos */
+    }
+
+    .navbar a {
+        font-size: 12px; /* Aún más pequeño */
+    }
+
+    .search-bar {
+        font-size: 12px; /* Reducir texto */
+    }
+
+    /* Ajustar el contenedor del carro */
+    .carro-contenedor {
+        flex-direction: column; /* Disponer en una sola columna */
+    }
+
+    .imagenes-carro,
+    .detalles-carro {
+        flex: none; /* Quitar el comportamiento flexible */
+        width: 100%; /* Ocupar el ancho completo */
+    }
+
+    .imagenes-carro {
+        margin-bottom: 20px; /* Separar visualmente */
+    }
+}
 
