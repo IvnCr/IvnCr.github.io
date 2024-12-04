@@ -24,9 +24,9 @@
             </div>
             <!-- Navigation Links -->
             <ul class="nav-links">
-                <li><a href="#about">Sobre Nosotros</a></li>
+                <li><a href="../index.html">Sobre Nosotros</a></li>
                 <li><a href="../noticias/noticias.html">Noticias</a></li>
-                <li><a href="../comprarCoche/comprarCoche.html">Comprar</a></li>
+                <li><a href="../categoriasDestacadas/cocheNuevo.html">Comprar</a></li>
                 <li><a href="../venderCoche/venderCoche.html">Vender</a></li>
             </ul>
         </nav>
@@ -98,33 +98,36 @@
         </div>
     </footer>
     <!-- Bootstrap Modal -->
-    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="loginModalLabel">Inicio de Sesión Exitoso</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    Has iniciado sesión correctamente.
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-                </div>
-            </div>
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel"
+aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header" style="background-color: #6a0dad; color: #fff;">
+            <h5 class="modal-title" id="loginModalLabel">Inicio de Sesión Exitoso</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body" style="background-color: #f8f9fa;">
+            <p style="color: #495057; font-size: 16px;">¡Has iniciado sesión correctamente! Ahora puedes acceder a todas las funcionalidades de la página.</p>
+        </div>
+        <div class="modal-footer" style="border-top: 1px solid #ddd;">
+            <button type="button" class="btn btn-primary" data-dismiss="modal" style="background-color: #6a0dad; border-color: #6a0dad;">Cerrar</button>
         </div>
     </div>
-    <script>
-        $(document).ready(function () {
-            $('#loginForm').on('submit', function (e) {
-                e.preventDefault();
-                $('#loginModal').modal('show');
-            });
-        });
-    </script>
+</div>
+</div>
+
+<script>
+$(document).ready(function () {
+    $('#loginForm').on('submit', function (e) {
+        e.preventDefault();
+        // Simulando que el inicio de sesión es exitoso
+        $('#loginModal').modal('show');
+    });
+});
+</script>
+
 </body>
 
 </html>

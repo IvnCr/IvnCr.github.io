@@ -1,15 +1,23 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
-    font-family:'Open Sans', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     background-color: #3f3f3f;
 }
+
 html {
     scroll-behavior: smooth;
 }
 
-h2{
-    font-family:'Courier New', Courier, monospace;
+h2 {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+main {
+    margin: 5%;
+    border-radius: 20px;
+    background-color: #ffffff;
 }
 
 header {
@@ -267,7 +275,7 @@ label {
 }
 
 /* Estilo de los inputs */
-input[type="text"] {
+.form-grid input[type="text"] {
     padding: 14px;
     font-size: 16px;
     border: 2px solid #ddd;
@@ -278,7 +286,7 @@ input[type="text"] {
 }
 
 /* Estilo cuando el input está enfocado */
-input[type="text"]:focus {
+.form-grid input[type="text"]:focus {
     border-color: #4b0082;
     background-color: #fff;
     outline: none;
@@ -286,7 +294,7 @@ input[type="text"]:focus {
 }
 
 /* Estilo del Placeholder */
-input[type="text"]::placeholder {
+.form-grid input[type="text"]::placeholder {
     color: #aaa;
     font-style: italic;
 }
@@ -303,7 +311,7 @@ input[type="text"]::placeholder {
     transition: width 0.3s ease;
 }
 
-input[type="text"]:focus + .form-group::after {
+.form-grid input[type="text"]:focus + .form-group::after {
     width: 100%;
 }
 
