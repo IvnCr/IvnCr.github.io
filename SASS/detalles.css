@@ -1,0 +1,421 @@
+@charset "UTF-8";
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: "Open Sans", sans-serif;
+  background-color: #3f3f3f;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h2 {
+  font-family: "Courier New", Courier, monospace;
+}
+
+main {
+  margin: 5%;
+  border-radius: 20px;
+  background-color: #ffffff;
+}
+
+header {
+  width: 100%;
+  background-color: #e5e5e5;
+  border-bottom: 1px solid #ffffff;
+  position: fixed; /* Mantener fija en la parte superior */
+  top: 0; /* Ubicar en la parte superior de la ventana */
+  z-index: 1000; /* Asegurar que esté por encima de otros elementos */
+}
+
+.mute-button {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: black;
+  padding: 3px;
+  margin-left: 20px;
+  border-radius: 50%;
+}
+
+.mute-button:hover {
+  color: #ffcc00;
+}
+
+.mute-button i {
+  font-size: 20px;
+}
+
+/* Estilo general de la barra de navegación */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 20px;
+}
+
+/* Estilo de los enlaces de navegación */
+.navbar a {
+  font-size: 16px;
+  color: #000; /* Color del texto */
+  text-decoration: none;
+  margin: 0 15px; /* Espaciado horizontal entre enlaces */
+  transition: transform 0.3s ease, color 0.3s ease; /* Transición suave para el agrandamiento */
+}
+
+/* Efecto hover para los enlaces de navegación */
+.navbar a:hover {
+  transform: scale(1.2); /* Aumentar tamaño a 120% */
+  color: #4b0082; /* Cambiar el color del texto al pasar el cursor */
+}
+
+/* Estilo del logo */
+.logo img {
+  height: 40px;
+}
+
+/* Estilo del contenedor de búsqueda */
+.search-container {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar {
+  border: 1px solid #000000;
+  border-radius: 40px;
+  padding: 8px 15px;
+  width: 400px;
+  height: 25px;
+}
+
+.search-button {
+  border: none;
+  background: none;
+  margin-left: -40px;
+  cursor: pointer;
+}
+
+/* Estilo de la lista de enlaces */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+/* Ajuste de estilo de cada enlace */
+.nav-links li a {
+  text-decoration: none;
+  color: #000000;
+  padding: 5px 10px;
+}
+
+/* Efecto hover para los enlaces de lista */
+.nav-links li a:hover {
+  border-bottom: 2px solid #333;
+}
+
+/* Estilo del contenedor de cuenta */
+.account-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.toggle-button {
+  border: none;
+  background-color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+/* Estilo para el contenedor que agrupa el login y el botón de cuenta */
+.account-combined {
+  display: flex; /* Flexbox para alinear los elementos */
+  align-items: center; /* Alinear verticalmente en el centro */
+  gap: 10px; /* Espacio entre el icono de login y el botón */
+  border-radius: 20px;
+}
+
+/* Botón de cuenta */
+.account-button {
+  margin-right: 10px;
+  padding: 5px 15px; /* Ajuste de padding */
+  display: flex; /* Flexbox para el contenido */
+  align-items: center; /* Alinear verticalmente en el centro */
+  border-radius: 10px; /* Bordes redondeados */
+  background-color: #cecece; /* Color de fondo */
+  color: rgb(0, 0, 0); /* Color de texto */
+}
+
+.account-button:hover {
+  background-color: #ffffff;
+}
+
+/* Estilo del icono de login */
+.login img {
+  margin-left: 10px;
+  height: 30px;
+  float: right;
+  margin-right: 0%;
+}
+
+main {
+  margin: 5%;
+  margin-top: 7%;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor principal */
+.carro-contenedor {
+  display: flex;
+  gap: 20px;
+}
+
+/* Sección de imágenes del carro */
+.imagenes-carro {
+  flex: 2;
+}
+
+.imagen-principal-carro {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Miniaturas del carro */
+.contenedor-miniaturas {
+  display: flex;
+  gap: 10px;
+}
+
+.miniatura {
+  width: calc(33.333% - 7px);
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Sección de detalles del carro */
+.detalles-carro {
+  flex: 1;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Título e información del carro */
+.titulo-carro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.nombre-carro {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.precio-carro {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #4a0e4e;
+}
+
+/* Formulario de compra */
+.formulario-compra-carro {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-compra-carro h2 {
+  margin-bottom: 15px;
+  color: #333;
+}
+
+/* Grupos de formulario */
+.grupo-formulario {
+  margin-bottom: 15px;
+}
+
+.grupo-formulario label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.grupo-formulario input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.boton-comprar {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4a0e4e;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.boton-comprar:hover {
+  background-color: #3a0b3e;
+}
+
+/* Logo del carro */
+.logo-carro {
+  width: 100px;
+  height: auto;
+  margin-top: 20px;
+}
+
+/* Estilo general del footer */
+.footer {
+  display: flex;
+  justify-content: space-between; /* Distribuir elementos de izquierda a derecha */
+  align-items: center;
+  background-color: #e5e5e5; /* Fondo claro */
+  padding: 10px 20px; /* Espaciado vertical reducido a 10px */
+  border-top: 2px solid #000; /* Línea superior */
+  height: 45px;
+}
+
+/* Estilo del contenedor izquierdo con el logo */
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+
+/* Estilo del logo */
+.footer-logo {
+  width: 70px; /* Ajustar tamaño del logo */
+  height: auto;
+}
+
+/* Estilo del contenedor central */
+.footer-center {
+  text-align: center;
+  font-size: 14px; /* Tamaño de letra */
+  color: #000;
+}
+
+/* Contenedor de íconos de redes sociales */
+.footer-right {
+  display: flex;
+  gap: 20px; /* Separación entre íconos */
+}
+
+/* Estilo de los íconos */
+.footer-icon img {
+  width: 25px; /* Tamaño de cada ícono */
+  height: 25px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+/* Efecto hover para los íconos */
+.footer-icon img:hover {
+  transform: scale(1.1); /* Aumentar tamaño al pasar el cursor */
+}
+
+/* Estilo base: ya definido en el CSS original */
+/* Adaptaciones para pantallas más pequeñas */
+@media (max-width: 768px) {
+  /* Ajustar el tamaño general del cuerpo y los márgenes */
+  main {
+    margin: 3%;
+    margin-top: 10%;
+    padding: 15px;
+  }
+  /* Reducir tamaño del logo */
+  .logo img {
+    height: 30px;
+  }
+  /* Ajustar barra de navegación */
+  .navbar {
+    flex-direction: column; /* Disponer en columna */
+    align-items: flex-start; /* Alinear a la izquierda */
+  }
+  .navbar a {
+    font-size: 14px; /* Reducir tamaño de los enlaces */
+    margin: 5px 0; /* Ajustar márgenes */
+  }
+  /* Ajustar la barra de búsqueda */
+  .search-bar {
+    width: 100%; /* Que ocupe todo el ancho */
+    margin-bottom: 10px;
+  }
+  .search-button {
+    margin-left: -30px;
+  }
+  /* Ajustar el contenedor de la cuenta */
+  .account-container {
+    flex-direction: column; /* Disponer en columna */
+    gap: 10px; /* Ajustar separación */
+  }
+  .account-button {
+    padding: 5px 10px; /* Reducir tamaño */
+  }
+  /* Ajustar contenedor de miniaturas */
+  .contenedor-miniaturas {
+    flex-wrap: wrap; /* Permitir varias filas */
+  }
+  .miniatura {
+    width: calc(50% - 5px); /* Dos por fila */
+    margin-bottom: 5px; /* Separación vertical */
+  }
+  /* Ajustar detalles del carro */
+  .detalles-carro {
+    padding: 15px;
+  }
+  .titulo-carro {
+    flex-direction: column; /* Apilar título y precio */
+    align-items: flex-start;
+  }
+  /* Ajustar footer */
+  .footer {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 10px;
+    text-align: center;
+  }
+}
+@media (max-width: 480px) {
+  /* Adaptaciones para pantallas muy pequeñas */
+  header {
+    position: relative; /* Quitar la posición fija para mejor ajuste */
+  }
+  .navbar {
+    align-items: center; /* Centrar elementos */
+  }
+  .navbar a {
+    font-size: 12px; /* Aún más pequeño */
+  }
+  .search-bar {
+    font-size: 12px; /* Reducir texto */
+  }
+  /* Ajustar el contenedor del carro */
+  .carro-contenedor {
+    flex-direction: column; /* Disponer en una sola columna */
+  }
+  .imagenes-carro,
+  .detalles-carro {
+    flex: none; /* Quitar el comportamiento flexible */
+    width: 100%; /* Ocupar el ancho completo */
+  }
+  .imagenes-carro {
+    margin-bottom: 20px; /* Separar visualmente */
+  }
+}
+
+/*# sourceMappingURL=detalles.css.map */
